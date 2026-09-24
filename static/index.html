@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Placar</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="w">
+  <div id="t0">10:00</div>
+
+  <div id="g">
+    <div class="c">
+      <h2>TIME A</h2>
+      <div class="n" id="p0">0</div>
+      <div class="r">
+        <button onclick="z('/p/0/1')">+1</button>
+        <button onclick="z('/p/0/2')">+2</button>
+        <button onclick="z('/p/0/3')">+3</button>
+        <button class="a" onclick="z('/p/0/-1')">-1</button>
+      </div>
+      <div class="l">Faltas: <b id="f0">0</b></div>
+      <div class="r">
+        <button onclick="z('/f/0/1')">+ Falta</button>
+        <button class="a" onclick="z('/f/0/-1')">- Falta</button>
+      </div>
+    </div>
+
+    <div class="c">
+      <h2>TIME B</h2>
+      <div class="n" id="p1">0</div>
+      <div class="r">
+        <button onclick="z('/p/1/1')">+1</button>
+        <button onclick="z('/p/1/2')">+2</button>
+        <button onclick="z('/p/1/3')">+3</button>
+        <button class="a" onclick="z('/p/1/-1')">-1</button>
+      </div>
+      <div class="l">Faltas: <b id="f1">0</b></div>
+      <div class="r">
+        <button onclick="z('/f/1/1')">+ Falta</button>
+        <button class="a" onclick="z('/f/1/-1')">- Falta</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="u">
+    <button class="v" onclick="z('/k')">Iniciar</button>
+    <button onclick="z('/l')">Pausar</button>
+    <input id="q" type="number" min="0" value="10" title="minutos">
+    <button onclick="y()">Definir min</button>
+    <button class="a" onclick="if(confirm('Reiniciar partida?'))z('/n')">Reiniciar</button>
+  </div>
+</div>
+<script src="/script.js"></script>
+</body>
+</html>
