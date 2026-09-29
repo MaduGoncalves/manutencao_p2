@@ -10,7 +10,7 @@
 
 <div id="painel-principal">
   <!-- Display do Cronômetro -->
-  <div id="display-cronometro">10:00</div>
+  <div id="display-cronometro">--:--</div>
 
   <!-- Container dos Times -->
   <div id="container-times">
@@ -20,17 +20,17 @@
       <div class="display-pontos" id="pontos-time-a">0</div>
       
       <div class="grupo-botoes">
-        <button onclick="enviarComando('/pontos/0/1')">+1</button>
-        <button onclick="enviarComando('/pontos/0/2')">+2</button>
-        <button onclick="enviarComando('/pontos/0/3')">+3</button>
-        <button class="botao-remover" onclick="enviarComando('/pontos/0/-1')">-1</button>
+        <button class="btn-acao" data-tipo="pontos" data-time="0" data-valor="1">+1</button>
+        <button class="btn-acao" data-tipo="pontos" data-time="0" data-valor="2">+2</button>
+        <button class="btn-acao" data-tipo="pontos" data-time="0" data-valor="3">+3</button>
+        <button class="btn-acao botao-remover" data-tipo="pontos" data-time="0" data-valor="-1">-1</button>
       </div>
 
       <div class="display-faltas">Faltas: <b id="faltas-time-a">0</b></div>
       
       <div class="grupo-botoes">
-        <button onclick="enviarComando('/faltas/0/1')">+ Falta</button>
-        <button class="botao-remover" onclick="enviarComando('/faltas/0/-1')">- Falta</button>
+        <button class="btn-acao" data-tipo="faltas" data-time="0" data-valor="1">+ Falta</button>
+        <button class="btn-acao botao-remover" data-tipo="faltas" data-time="0" data-valor="-1">- Falta</button>
       </div>
     </div>
 
@@ -40,30 +40,30 @@
       <div class="display-pontos" id="pontos-time-b">0</div>
       
       <div class="grupo-botoes">
-        <button onclick="enviarComando('/pontos/1/1')">+1</button>
-        <button onclick="enviarComando('/pontos/1/2')">+2</button>
-        <button onclick="enviarComando('/pontos/1/3')">+3</button>
-        <button class="botao-remover" onclick="enviarComando('/pontos/1/-1')">-1</button>
+        <button class="btn-acao" data-tipo="pontos" data-time="1" data-valor="1">+1</button>
+        <button class="btn-acao" data-tipo="pontos" data-time="1" data-valor="2">+2</button>
+        <button class="btn-acao" data-tipo="pontos" data-time="1" data-valor="3">+3</button>
+        <button class="btn-acao botao-remover" data-tipo="pontos" data-time="1" data-valor="-1">-1</button>
       </div>
 
       <div class="display-faltas">Faltas: <b id="faltas-time-b">0</b></div>
       
       <div class="grupo-botoes">
-        <button onclick="enviarComando('/faltas/1/1')">+ Falta</button>
-        <button class="botao-remover" onclick="enviarComando('/faltas/1/-1')">- Falta</button>
+        <button class="btn-acao" data-tipo="faltas" data-time="1" data-valor="1">+ Falta</button>
+        <button class="btn-acao botao-remover" data-tipo="faltas" data-time="1" data-valor="-1">- Falta</button>
       </div>
     </div>
   </div>
 
   <!-- Controles da Partida -->
   <div id="painel-controles">
-    <button class="botao-iniciar" onclick="enviarComando('/iniciar')">Iniciar</button>
-    <button onclick="enviarComando('/pausar')">Pausar</button>
+    <button id="btn-iniciar" class="botao-iniciar">Iniciar</button>
+    <button id="btn-pausar">Pausar</button>
 
     <input id="campo-minutos" type="number" min="0" value="10" title="minutos">
-    <button onclick="definirTempoPartida()">Definir min</button>
+    <button id="btn-definir-tempo">Definir min</button>
 
-    <button class="botao-remover" onclick="if(confirm('Reiniciar partida?')) enviarComando('/reiniciar')">Reiniciar</button>
+    <button id="btn-reiniciar" class="botao-remover">Reiniciar</button>
   </div>
 </div>
 
