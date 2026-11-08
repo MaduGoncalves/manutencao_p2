@@ -3,10 +3,8 @@ Suíte Completa e Definitiva de Testes Unitários - placarServer.py
 Preserva todos os testes funcionais/HTTP e adiciona testes de precisão atômica
 para zerar os mutantes SURVIVED no Cosmic Ray.
 
-Execução:
-    python -m unittest test_placarServer -v
-    ou
-    pytest test_placarServer.py
+Execução (a partir da raiz do projeto):
+    python -m unittest discover -s test -p "test_placar.py" -v
 """
 
 import http.client
@@ -21,16 +19,20 @@ from http.server import ThreadingHTTPServer
 from pathlib import Path
 from unittest import mock
 
-CAMINHO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "placarServer.py")
+CAMINHO = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "placarServer.py")
 METODO_ACOES = "POST"
 
 
 def carregar_modulo(nome="placarServer_teste"):
     """Carrega uma nova instância limpa do módulo."""
-    spec = importlib.util.spec_from_file_location(nome, CAMINHO)
+    spec = importlib.util.spec_from_file_location("placarServer", CAMINHO)
     modulo = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(modulo)
     return modulo
+
+
+def texto_novo(texto):
+    return "".join(list(texto))
 
 
 # ==============================================================================
@@ -359,5 +361,179 @@ class TestMain(unittest.TestCase):
         self.assertIn("8000", str(p.call_args))
 
 
+# ==============================================================================
+# 6. Matar os mutantes sobreviventes restantes (cobertura de código)
+# ==============================================================================
+class TestMatarMutantesRegrasDeTempo(unittest.TestCase):
+    def setUp(self):
+        self.m = carregar_modulo()
+        self.m.reiniciar_partida()
+
+    # Matar mutantes: NumberReplacer (10 -> 11/9 e 60 -> 61/59) e todos os Mul_* da linha 11
+    def test_tempo_padrao_vale_600000_ms(self):
+        self.assertEqual(self.m.MINUTOS_PADRAO_PARTIDA, 10)
+        self.assertEqual(self.m.SEGUNDOS_POR_MINUTO, 60)
+        self.assertEqual(self.m.TEMPO_PADRAO_PARTIDA_MS, 600000)
+        self.assertEqual(self.m.estado_partida["tempo_restante_ms"], 600000)
+
+    # Matar mutantes: todos os Mul_* da linha 39 (obter_tempo_atual_ms)
+    def test_obter_tempo_atual_converte_segundos_em_ms(self):
+        with mock.patch("time.time", return_value=1.5):
+            self.assertEqual(self.m.obter_tempo_atual_ms(), 1500)
+
+    # Matar mutante: ReplaceComparisonOperator_LtE_Eq da linha 90
+    def test_iniciar_com_tempo_negativo_nao_inicia(self):
+        e = self.m.estado_partida
+        e["tempo_restante_ms"] = -5
+        with mock.patch.object(self.m, "obter_tempo_atual_ms", return_value=1000):
+            self.m.iniciar_cronometro()
+        self.assertIs(e["em_andamento"], False)
+        self.assertEqual(e["inicio_cronometro_ms"], 0)
+
+    # Matar mutante: ReplaceFalseWithTrue #2 da linha 100 (pausar_cronometro)
+    def test_pausar_congela_o_tempo_e_para_o_cronometro(self):
+        e = self.m.estado_partida
+        e["tempo_restante_ms"] = 10000
+        e["em_andamento"] = True
+        e["inicio_cronometro_ms"] = 0
+        with mock.patch.object(self.m, "obter_tempo_atual_ms", return_value=3000):
+            self.m.pausar_cronometro()
+        self.assertEqual(e["tempo_restante_ms"], 7000)
+        self.assertIs(e["em_andamento"], False)
+
+
+class TestMatarMutantesRoteamento(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.m = carregar_modulo()
+        cls.servidor = ThreadingHTTPServer(("127.0.0.1", 0), cls.m.manipuladorRequisicaoHTTP)
+        cls.porta = cls.servidor.server_address[1]
+        cls.thread = threading.Thread(target=cls.servidor.serve_forever, daemon=True)
+        cls.thread.start()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.servidor.shutdown()
+        cls.servidor.server_close()
+
+    def setUp(self):
+        self.m.reiniciar_partida()
+
+    def req_completa(self, caminho, metodo="POST"):
+        conn = http.client.HTTPConnection("127.0.0.1", self.porta, timeout=5)
+        conn.request(metodo, caminho)
+        resp = conn.getresponse()
+        corpo = resp.read()
+        cabecalhos = dict(resp.getheaders())
+        conn.close()
+        return resp.status, cabecalhos, corpo
+
+    # Matar mutantes: Eq_Gt, Eq_GtE e Eq_Is das linhas 165 e 168 (acoes iniciar e pausar)
+    def test_iniciar_e_pausar_via_http(self):
+        with mock.patch.object(self.m, "obter_tempo_atual_ms", return_value=5000):
+            status, _, corpo = self.req_completa("/api/partida/iniciar")
+        self.assertEqual(status, 200)
+        self.assertTrue(json.loads(corpo)["em_andamento"])
+        self.assertEqual(self.m.estado_partida["inicio_cronometro_ms"], 5000)
+
+        with mock.patch.object(self.m, "obter_tempo_atual_ms", return_value=8000):
+            status, _, corpo = self.req_completa("/api/partida/pausar")
+        dados = json.loads(corpo)
+        self.assertEqual(status, 200)
+        self.assertFalse(dados["em_andamento"])
+        self.assertEqual(dados["tempo_restante_ms"], 597000)
+
+    # Matar mutantes: Eq_GtE das linhas 155, 160, 165, 168, 171 e 176, Eq_Gt e Eq_Is da linha 176
+    def test_reiniciar_via_http(self):
+        e = self.m.estado_partida
+        e["pontos"] = [5, 7]
+        e["faltas"] = [2, 3]
+        e["tempo_restante_ms"] = 123
+        status, _, _ = self.req_completa("/api/partida/reiniciar")
+        self.assertEqual(status, 200)
+        self.assertEqual(e["pontos"], [0, 0])
+        self.assertEqual(e["faltas"], [0, 0])
+        self.assertEqual(e["tempo_restante_ms"], 600000)
+        self.assertIs(e["em_andamento"], False)
+
+    # Matar mutantes: Eq_GtE da linha 176 (acao maior que "reiniciar" nao pode reiniciar)
+    def test_acao_alfabeticamente_maior_nao_reinicia(self):
+        self.m.estado_partida["pontos"] = [5, 7]
+        status, _, _ = self.req_completa("/api/partida/zzz")
+        self.assertEqual(status, 400)
+        self.assertEqual(self.m.estado_partida["pontos"], [5, 7])
+
+    # Matar mutantes: Eq_LtE e Eq_IsNot da linha 171 (acao menor que "definir_tempo" nao define tempo)
+    def test_acao_alfabeticamente_menor_nao_define_tempo(self):
+        status, _, _ = self.req_completa("/api/partida/abc/5")
+        self.assertEqual(status, 400)
+        self.assertEqual(self.m.estado_partida["tempo_restante_ms"], 600000)
+
+    # Matar mutantes: Lt_NotEq das linhas 156, 161 e 172 (parametros alem do minimo)
+    def test_parametros_extras_sao_aceitos(self):
+        self.assertEqual(self.req_completa("/api/partida/pontos/0/2/extra")[0], 200)
+        self.assertEqual(self.m.estado_partida["pontos"], [2, 0])
+        self.assertEqual(self.req_completa("/api/partida/faltas/1/3/extra")[0], 200)
+        self.assertEqual(self.m.estado_partida["faltas"], [0, 3])
+        self.assertEqual(self.req_completa("/api/partida/definir_tempo/5/extra")[0], 200)
+        self.assertEqual(self.m.estado_partida["tempo_restante_ms"], 5000)
+
+    # Matar mutante: Eq_GtE da linha 228 (outro arquivo estatico nao pode virar index.html)
+    def test_serve_arquivo_estatico_que_nao_e_o_index(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            (Path(tmp) / "index.html").write_bytes(b"idx")
+            (Path(tmp) / "style.css").write_bytes(b"css")
+            with mock.patch.object(self.m, "DIRETORIO_ARQUIVOS_ESTATICOS", Path(tmp).resolve()):
+                status, cab, corpo = self.req_completa("/style.css", "GET")
+        self.assertEqual(status, 200)
+        self.assertEqual(cab["Content-Type"], "text/css; charset=utf-8")
+        self.assertEqual(corpo, b"css")
+
+    # Matar mutante: Eq_LtE da linha 228 (caminho menor que "/" nao pode virar index.html)
+    def test_caminho_menor_que_barra_nao_serve_index(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            (Path(tmp) / "index.html").write_bytes(b"idx")
+            with mock.patch.object(self.m, "DIRETORIO_ARQUIVOS_ESTATICOS", Path(tmp).resolve()):
+                status, _, _ = self.req_completa("-x", "GET")
+        self.assertEqual(status, 404)
+
+    # Matar mutante: Eq_Is #6 da linha 228 (== "/" nao pode virar "is '/'")
+    def test_raiz_igual_mas_nao_identica_serve_index(self):
+        class StrNova(str):
+            """Igual a '/', mas nunca o mesmo objeto que o literal '/'."""
+
+        raiz = StrNova("/")
+        self.assertEqual(raiz, "/")
+        self.assertIsNot(raiz, "/")
+
+        with tempfile.TemporaryDirectory() as tmp:
+            (Path(tmp) / "index.html").write_bytes(b"<h1>idx</h1>")
+            with mock.patch.object(self.m, "DIRETORIO_ARQUIVOS_ESTATICOS", Path(tmp).resolve()):
+                handler = object.__new__(self.m.manipuladorRequisicaoHTTP)
+                with mock.patch.object(handler, "enviar_resposta_http") as enviar:
+                    handler.tratar_arquivo_estatico(raiz)
+
+        enviar.assert_called_once_with(
+            self.m.manipuladorRequisicaoHTTP.HTTP_STATUS_OK,
+            b"<h1>idx</h1>",
+            "text/html; charset=utf-8",
+        )
+
+
+class TestMatarMutantesBlocoMain(unittest.TestCase):
+    # Matar mutante: Eq_LtE da linha 259 (nome de modulo menor que "__main__" nao sobe servidor)
+    def test_nao_sobe_servidor_com_outro_nome_de_modulo(self):
+        with mock.patch("http.server.ThreadingHTTPServer") as falso, mock.patch("builtins.print"):
+            runpy.run_path(CAMINHO, run_name="Aplicacao")
+        falso.assert_not_called()
+
+    # Matar mutante: Eq_Is da linha 259 (comparacao por igualdade e nao por identidade)
+    def test_sobe_servidor_com_nome_main_criado_em_tempo_de_execucao(self):
+        with mock.patch("http.server.ThreadingHTTPServer") as falso, mock.patch("builtins.print"):
+            runpy.run_path(CAMINHO, run_name=texto_novo("__main__"))
+        falso.return_value.serve_forever.assert_called_once()
+
+
 if __name__ == "__main__":
     unittest.main()
+    

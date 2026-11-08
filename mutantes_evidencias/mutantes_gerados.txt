@@ -1,0 +1,5239 @@
+﻿[job-id] c474be367ae34cc491c03d022234bd50
+placarServer.py core/ReplaceBinaryOperator_Add_Sub 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -66,7 +66,7 @@
+ 
+     pontos_atuais = estado_partida["pontos"][indice_equipe]
+     estado_partida["pontos"][indice_equipe] = max(
+-        VALOR_MINIMO_PONTOS, pontos_atuais + variacao_pontos
++        VALOR_MINIMO_PONTOS, pontos_atuais - variacao_pontos
+     )
+ 
+ 
+============
+[job-id] cfcffabd6058462aae18e67eccb85185
+placarServer.py core/ReplaceBinaryOperator_Add_Sub 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -79,7 +79,7 @@
+ 
+     faltas_atuais = estado_partida["faltas"][indice_equipe]
+     estado_partida["faltas"][indice_equipe] = max(
+-        VALOR_MINIMO_FALTAS, faltas_atuais + variacao_faltas
++        VALOR_MINIMO_FALTAS, faltas_atuais - variacao_faltas
+     )
+ 
+ 
+============
+[job-id] aa4c4b5e7ff34cf29c3acf6752e016f5
+placarServer.py core/ReplaceBinaryOperator_Add_Mul 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -66,7 +66,7 @@
+ 
+     pontos_atuais = estado_partida["pontos"][indice_equipe]
+     estado_partida["pontos"][indice_equipe] = max(
+-        VALOR_MINIMO_PONTOS, pontos_atuais + variacao_pontos
++        VALOR_MINIMO_PONTOS, pontos_atuais * variacao_pontos
+     )
+ 
+ 
+============
+[job-id] 394d14e539644a0f83e1ab1b6b2ac3fb
+placarServer.py core/ReplaceBinaryOperator_Add_Mul 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -79,7 +79,7 @@
+ 
+     faltas_atuais = estado_partida["faltas"][indice_equipe]
+     estado_partida["faltas"][indice_equipe] = max(
+-        VALOR_MINIMO_FALTAS, faltas_atuais + variacao_faltas
++        VALOR_MINIMO_FALTAS, faltas_atuais * variacao_faltas
+     )
+ 
+ 
+============
+[job-id] 436b3723257c49949bb0a5208c67e474
+placarServer.py core/ReplaceBinaryOperator_Add_Div 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -66,7 +66,7 @@
+ 
+     pontos_atuais = estado_partida["pontos"][indice_equipe]
+     estado_partida["pontos"][indice_equipe] = max(
+-        VALOR_MINIMO_PONTOS, pontos_atuais + variacao_pontos
++        VALOR_MINIMO_PONTOS, pontos_atuais / variacao_pontos
+     )
+ 
+ 
+============
+[job-id] 2d5d03b04c0749dc85afd5e0e002b172
+placarServer.py core/ReplaceBinaryOperator_Add_Div 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -79,7 +79,7 @@
+ 
+     faltas_atuais = estado_partida["faltas"][indice_equipe]
+     estado_partida["faltas"][indice_equipe] = max(
+-        VALOR_MINIMO_FALTAS, faltas_atuais + variacao_faltas
++        VALOR_MINIMO_FALTAS, faltas_atuais / variacao_faltas
+     )
+ 
+ 
+============
+[job-id] aa7cfc68db404faaba0b5601f8e13c78
+placarServer.py core/ReplaceBinaryOperator_Add_FloorDiv 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -66,7 +66,7 @@
+ 
+     pontos_atuais = estado_partida["pontos"][indice_equipe]
+     estado_partida["pontos"][indice_equipe] = max(
+-        VALOR_MINIMO_PONTOS, pontos_atuais + variacao_pontos
++        VALOR_MINIMO_PONTOS, pontos_atuais // variacao_pontos
+     )
+ 
+ 
+============
+[job-id] d8cb690e2e8b4dffac6f23b2f6948e65
+placarServer.py core/ReplaceBinaryOperator_Add_FloorDiv 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -79,7 +79,7 @@
+ 
+     faltas_atuais = estado_partida["faltas"][indice_equipe]
+     estado_partida["faltas"][indice_equipe] = max(
+-        VALOR_MINIMO_FALTAS, faltas_atuais + variacao_faltas
++        VALOR_MINIMO_FALTAS, faltas_atuais // variacao_faltas
+     )
+ 
+ 
+============
+[job-id] 3375dab5d9544e7f8dae4490d4113e2b
+placarServer.py core/ReplaceBinaryOperator_Add_Mod 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -66,7 +66,7 @@
+ 
+     pontos_atuais = estado_partida["pontos"][indice_equipe]
+     estado_partida["pontos"][indice_equipe] = max(
+-        VALOR_MINIMO_PONTOS, pontos_atuais + variacao_pontos
++        VALOR_MINIMO_PONTOS, pontos_atuais % variacao_pontos
+     )
+ 
+ 
+============
+[job-id] 7b914f76f423402881a013aca64726b2
+placarServer.py core/ReplaceBinaryOperator_Add_Mod 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -79,7 +79,7 @@
+ 
+     faltas_atuais = estado_partida["faltas"][indice_equipe]
+     estado_partida["faltas"][indice_equipe] = max(
+-        VALOR_MINIMO_FALTAS, faltas_atuais + variacao_faltas
++        VALOR_MINIMO_FALTAS, faltas_atuais % variacao_faltas
+     )
+ 
+ 
+============
+[job-id] ef13a33a95634188b22d0fdad912346a
+placarServer.py core/ReplaceBinaryOperator_Add_Pow 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -66,7 +66,7 @@
+ 
+     pontos_atuais = estado_partida["pontos"][indice_equipe]
+     estado_partida["pontos"][indice_equipe] = max(
+-        VALOR_MINIMO_PONTOS, pontos_atuais + variacao_pontos
++        VALOR_MINIMO_PONTOS, pontos_atuais ** variacao_pontos
+     )
+ 
+ 
+============
+[job-id] 3747ffa143d44a2e9b0951ce2750b0c0
+placarServer.py core/ReplaceBinaryOperator_Add_Pow 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -79,7 +79,7 @@
+ 
+     faltas_atuais = estado_partida["faltas"][indice_equipe]
+     estado_partida["faltas"][indice_equipe] = max(
+-        VALOR_MINIMO_FALTAS, faltas_atuais + variacao_faltas
++        VALOR_MINIMO_FALTAS, faltas_atuais ** variacao_faltas
+     )
+ 
+ 
+============
+[job-id] 5ed02ddce9604de1bcab8a5788f6b794
+placarServer.py core/ReplaceBinaryOperator_Add_RShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -66,7 +66,7 @@
+ 
+     pontos_atuais = estado_partida["pontos"][indice_equipe]
+     estado_partida["pontos"][indice_equipe] = max(
+-        VALOR_MINIMO_PONTOS, pontos_atuais + variacao_pontos
++        VALOR_MINIMO_PONTOS, pontos_atuais >> variacao_pontos
+     )
+ 
+ 
+============
+[job-id] f9f59dae5ae3401ab6c2b2f2eb6f6cfb
+placarServer.py core/ReplaceBinaryOperator_Add_RShift 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -79,7 +79,7 @@
+ 
+     faltas_atuais = estado_partida["faltas"][indice_equipe]
+     estado_partida["faltas"][indice_equipe] = max(
+-        VALOR_MINIMO_FALTAS, faltas_atuais + variacao_faltas
++        VALOR_MINIMO_FALTAS, faltas_atuais >> variacao_faltas
+     )
+ 
+ 
+============
+[job-id] cb15bed92a3943c1aaa67bdef66ccbc0
+placarServer.py core/ReplaceBinaryOperator_Add_LShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -66,7 +66,7 @@
+ 
+     pontos_atuais = estado_partida["pontos"][indice_equipe]
+     estado_partida["pontos"][indice_equipe] = max(
+-        VALOR_MINIMO_PONTOS, pontos_atuais + variacao_pontos
++        VALOR_MINIMO_PONTOS, pontos_atuais << variacao_pontos
+     )
+ 
+ 
+============
+[job-id] 5df560d35bc74007a051bbdbd823b4fe
+placarServer.py core/ReplaceBinaryOperator_Add_LShift 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -79,7 +79,7 @@
+ 
+     faltas_atuais = estado_partida["faltas"][indice_equipe]
+     estado_partida["faltas"][indice_equipe] = max(
+-        VALOR_MINIMO_FALTAS, faltas_atuais + variacao_faltas
++        VALOR_MINIMO_FALTAS, faltas_atuais << variacao_faltas
+     )
+ 
+ 
+============
+[job-id] b05e915b8134472aad9f76377d21acd6
+placarServer.py core/ReplaceBinaryOperator_Add_BitOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -66,7 +66,7 @@
+ 
+     pontos_atuais = estado_partida["pontos"][indice_equipe]
+     estado_partida["pontos"][indice_equipe] = max(
+-        VALOR_MINIMO_PONTOS, pontos_atuais + variacao_pontos
++        VALOR_MINIMO_PONTOS, pontos_atuais | variacao_pontos
+     )
+ 
+ 
+============
+[job-id] 13b60a9d11574bd999c385bb242deacf
+placarServer.py core/ReplaceBinaryOperator_Add_BitOr 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -79,7 +79,7 @@
+ 
+     faltas_atuais = estado_partida["faltas"][indice_equipe]
+     estado_partida["faltas"][indice_equipe] = max(
+-        VALOR_MINIMO_FALTAS, faltas_atuais + variacao_faltas
++        VALOR_MINIMO_FALTAS, faltas_atuais | variacao_faltas
+     )
+ 
+ 
+============
+[job-id] 1aeb2bd5f7704027ac62024ceb65c2ae
+placarServer.py core/ReplaceBinaryOperator_Add_BitAnd 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -66,7 +66,7 @@
+ 
+     pontos_atuais = estado_partida["pontos"][indice_equipe]
+     estado_partida["pontos"][indice_equipe] = max(
+-        VALOR_MINIMO_PONTOS, pontos_atuais + variacao_pontos
++        VALOR_MINIMO_PONTOS, pontos_atuais & variacao_pontos
+     )
+ 
+ 
+============
+[job-id] fb49183ff3254aceacc806ccfd837f87
+placarServer.py core/ReplaceBinaryOperator_Add_BitAnd 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -79,7 +79,7 @@
+ 
+     faltas_atuais = estado_partida["faltas"][indice_equipe]
+     estado_partida["faltas"][indice_equipe] = max(
+-        VALOR_MINIMO_FALTAS, faltas_atuais + variacao_faltas
++        VALOR_MINIMO_FALTAS, faltas_atuais & variacao_faltas
+     )
+ 
+ 
+============
+[job-id] 684059ef4a69430f8a8791a7ae6d1287
+placarServer.py core/ReplaceBinaryOperator_Add_BitXor 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -66,7 +66,7 @@
+ 
+     pontos_atuais = estado_partida["pontos"][indice_equipe]
+     estado_partida["pontos"][indice_equipe] = max(
+-        VALOR_MINIMO_PONTOS, pontos_atuais + variacao_pontos
++        VALOR_MINIMO_PONTOS, pontos_atuais ^ variacao_pontos
+     )
+ 
+ 
+============
+[job-id] 7c3412586d7842dc987d9fd8c3409ded
+placarServer.py core/ReplaceBinaryOperator_Add_BitXor 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -79,7 +79,7 @@
+ 
+     faltas_atuais = estado_partida["faltas"][indice_equipe]
+     estado_partida["faltas"][indice_equipe] = max(
+-        VALOR_MINIMO_FALTAS, faltas_atuais + variacao_faltas
++        VALOR_MINIMO_FALTAS, faltas_atuais ^ variacao_faltas
+     )
+ 
+ 
+============
+[job-id] 40dc001087ef4933af281ae120370163
+placarServer.py core/ReplaceBinaryOperator_Sub_Add 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -46,7 +46,7 @@
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+-    tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
++    tempo_decorrido = obter_tempo_atual_ms() + estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+============
+[job-id] b1e34b58be0745678c3fce5b219a09e0
+placarServer.py core/ReplaceBinaryOperator_Sub_Add 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -47,7 +47,7 @@
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+-    tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
++    tempo_restante = estado_partida["tempo_restante_ms"] + tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+============
+[job-id] 4b15d2dcf39146918fee7f479a9e3d9d
+placarServer.py core/ReplaceBinaryOperator_Sub_Mul 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -46,7 +46,7 @@
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+-    tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
++    tempo_decorrido = obter_tempo_atual_ms() * estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+============
+[job-id] 4174323d39fa4a5ca03ba76848fc5614
+placarServer.py core/ReplaceBinaryOperator_Sub_Mul 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -47,7 +47,7 @@
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+-    tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
++    tempo_restante = estado_partida["tempo_restante_ms"] * tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+============
+[job-id] bcaf52cd38a44013a79113e91e602964
+placarServer.py core/ReplaceBinaryOperator_Sub_Div 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -46,7 +46,7 @@
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+-    tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
++    tempo_decorrido = obter_tempo_atual_ms() / estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+============
+[job-id] b5ca30285737466aa9c48c66deb57f4b
+placarServer.py core/ReplaceBinaryOperator_Sub_Div 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -47,7 +47,7 @@
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+-    tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
++    tempo_restante = estado_partida["tempo_restante_ms"] / tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+============
+[job-id] 175fa6d49b87441c992e43653052d8f5
+placarServer.py core/ReplaceBinaryOperator_Sub_FloorDiv 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -46,7 +46,7 @@
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+-    tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
++    tempo_decorrido = obter_tempo_atual_ms() // estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+============
+[job-id] 9e30c86f9fae46bea97b60c70c52c395
+placarServer.py core/ReplaceBinaryOperator_Sub_FloorDiv 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -47,7 +47,7 @@
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+-    tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
++    tempo_restante = estado_partida["tempo_restante_ms"] // tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+============
+[job-id] 1b8da9bce5c74a1d9b368ecb91249451
+placarServer.py core/ReplaceBinaryOperator_Sub_Mod 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -46,7 +46,7 @@
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+-    tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
++    tempo_decorrido = obter_tempo_atual_ms() % estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+============
+[job-id] dbbc161cb4f444c089a49809254c22c0
+placarServer.py core/ReplaceBinaryOperator_Sub_Mod 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -47,7 +47,7 @@
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+-    tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
++    tempo_restante = estado_partida["tempo_restante_ms"] % tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+============
+[job-id] ad34042140354aacb21542be1dae2fdf
+placarServer.py core/ReplaceBinaryOperator_Sub_Pow 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -46,7 +46,7 @@
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+-    tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
++    tempo_decorrido = obter_tempo_atual_ms() ** estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+============
+[job-id] c3e8e596d8e74af2a563d6218d16387e
+placarServer.py core/ReplaceBinaryOperator_Sub_Pow 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -47,7 +47,7 @@
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+-    tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
++    tempo_restante = estado_partida["tempo_restante_ms"] ** tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+============
+[job-id] 9c3acfdb6c02426da73ea44e3ebe9b37
+placarServer.py core/ReplaceBinaryOperator_Sub_RShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -46,7 +46,7 @@
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+-    tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
++    tempo_decorrido = obter_tempo_atual_ms() >> estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+============
+[job-id] ff603f393cae4c458e5a19953f6639af
+placarServer.py core/ReplaceBinaryOperator_Sub_RShift 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -47,7 +47,7 @@
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+-    tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
++    tempo_restante = estado_partida["tempo_restante_ms"] >> tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+============
+[job-id] 0b4e31cf1d67497bbd5f876560ad29f3
+placarServer.py core/ReplaceBinaryOperator_Sub_LShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -46,7 +46,7 @@
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+-    tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
++    tempo_decorrido = obter_tempo_atual_ms() << estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+============
+[job-id] b9f72999b73c4ae1929a1d15d3dff914
+placarServer.py core/ReplaceBinaryOperator_Sub_LShift 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -47,7 +47,7 @@
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+-    tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
++    tempo_restante = estado_partida["tempo_restante_ms"] << tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+============
+[job-id] ddc2d32d60dc4d2ab941ec9357c7ed70
+placarServer.py core/ReplaceBinaryOperator_Sub_BitOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -46,7 +46,7 @@
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+-    tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
++    tempo_decorrido = obter_tempo_atual_ms() | estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+============
+[job-id] 6c3a2e1e08284ccaba306091656a4fd6
+placarServer.py core/ReplaceBinaryOperator_Sub_BitOr 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -47,7 +47,7 @@
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+-    tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
++    tempo_restante = estado_partida["tempo_restante_ms"] | tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+============
+[job-id] 699858bbcaf047758b2f9fc7b3948be0
+placarServer.py core/ReplaceBinaryOperator_Sub_BitAnd 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -46,7 +46,7 @@
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+-    tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
++    tempo_decorrido = obter_tempo_atual_ms() & estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+============
+[job-id] 4b82022506bd427e93cc814ccd72e2bc
+placarServer.py core/ReplaceBinaryOperator_Sub_BitAnd 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -47,7 +47,7 @@
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+-    tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
++    tempo_restante = estado_partida["tempo_restante_ms"] & tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+============
+[job-id] 388e6cee5cfc41b983c11880af15a96f
+placarServer.py core/ReplaceBinaryOperator_Sub_BitXor 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -46,7 +46,7 @@
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+-    tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
++    tempo_decorrido = obter_tempo_atual_ms() ^ estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+============
+[job-id] 018b45b41a1a4378a81a5f6bd893e6b6
+placarServer.py core/ReplaceBinaryOperator_Sub_BitXor 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -47,7 +47,7 @@
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+-    tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
++    tempo_restante = estado_partida["tempo_restante_ms"] ^ tempo_decorrido
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+============
+[job-id] b2f88361622040aab3618649606e461e
+placarServer.py core/ReplaceBinaryOperator_Mul_Add 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA + SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 03b7d2ea800e4937ab56444326709f09
+placarServer.py core/ReplaceBinaryOperator_Mul_Add 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO + MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 5698ed30fec24aa48b3d906dfbde4518
+placarServer.py core/ReplaceBinaryOperator_Mul_Add 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -36,7 +36,7 @@
+ 
+ def obter_tempo_atual_ms():
+     """Retorna o timestamp atual em milissegundos."""
+-    return int(time.time() * MILISSEGUNDOS_POR_SEGUNDO)
++    return int(time.time() + MILISSEGUNDOS_POR_SEGUNDO)
+ 
+ 
+ def calcular_tempo_restante_cronometro():
+============
+[job-id] 3d111ba7d7a545c58e9f0373bddb9fe9
+placarServer.py core/ReplaceBinaryOperator_Mul_Add 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -109,7 +109,7 @@
+     if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+-    estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
++    estado_partida["tempo_restante_ms"] = tempo_em_segundos + MILISSEGUNDOS_POR_SEGUNDO
+ 
+ 
+ def reiniciar_partida():
+============
+[job-id] 51d1e5779a3b4425811ff9c23879f2aa
+placarServer.py core/ReplaceBinaryOperator_Mul_Sub 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA - SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 6d0a18dea4ce4ae7a14ca3aed80bd60f
+placarServer.py core/ReplaceBinaryOperator_Mul_Sub 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO - MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 4985ef18a222494cb730cf1a02587415
+placarServer.py core/ReplaceBinaryOperator_Mul_Sub 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -36,7 +36,7 @@
+ 
+ def obter_tempo_atual_ms():
+     """Retorna o timestamp atual em milissegundos."""
+-    return int(time.time() * MILISSEGUNDOS_POR_SEGUNDO)
++    return int(time.time() - MILISSEGUNDOS_POR_SEGUNDO)
+ 
+ 
+ def calcular_tempo_restante_cronometro():
+============
+[job-id] 224efdef94dd4d92a0ec751db3012bce
+placarServer.py core/ReplaceBinaryOperator_Mul_Sub 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -109,7 +109,7 @@
+     if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+-    estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
++    estado_partida["tempo_restante_ms"] = tempo_em_segundos - MILISSEGUNDOS_POR_SEGUNDO
+ 
+ 
+ def reiniciar_partida():
+============
+[job-id] 0df5cf4bc5f540218fcca9a49f62d2b1
+placarServer.py core/ReplaceBinaryOperator_Mul_Div 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA / SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] f04d3c3223af4ed38938c3f624deff37
+placarServer.py core/ReplaceBinaryOperator_Mul_Div 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO / MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 695bcd549a6744e7bf177f47d086bd17
+placarServer.py core/ReplaceBinaryOperator_Mul_Div 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -36,7 +36,7 @@
+ 
+ def obter_tempo_atual_ms():
+     """Retorna o timestamp atual em milissegundos."""
+-    return int(time.time() * MILISSEGUNDOS_POR_SEGUNDO)
++    return int(time.time() / MILISSEGUNDOS_POR_SEGUNDO)
+ 
+ 
+ def calcular_tempo_restante_cronometro():
+============
+[job-id] 7f3fe16fa3404c9886de3bab741941e2
+placarServer.py core/ReplaceBinaryOperator_Mul_Div 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -109,7 +109,7 @@
+     if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+-    estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
++    estado_partida["tempo_restante_ms"] = tempo_em_segundos / MILISSEGUNDOS_POR_SEGUNDO
+ 
+ 
+ def reiniciar_partida():
+============
+[job-id] 99b8e2a4a42a4df5a1420c933d2bdd4f
+placarServer.py core/ReplaceBinaryOperator_Mul_FloorDiv 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA // SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] e932092e72074cc19ee9b6656f9492e5
+placarServer.py core/ReplaceBinaryOperator_Mul_FloorDiv 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO // MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 13455cba1149409a8f9a5dc9b37f3f7f
+placarServer.py core/ReplaceBinaryOperator_Mul_FloorDiv 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -36,7 +36,7 @@
+ 
+ def obter_tempo_atual_ms():
+     """Retorna o timestamp atual em milissegundos."""
+-    return int(time.time() * MILISSEGUNDOS_POR_SEGUNDO)
++    return int(time.time() // MILISSEGUNDOS_POR_SEGUNDO)
+ 
+ 
+ def calcular_tempo_restante_cronometro():
+============
+[job-id] e6d1dd3bae8d4fb0acc954040e81f036
+placarServer.py core/ReplaceBinaryOperator_Mul_FloorDiv 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -109,7 +109,7 @@
+     if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+-    estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
++    estado_partida["tempo_restante_ms"] = tempo_em_segundos // MILISSEGUNDOS_POR_SEGUNDO
+ 
+ 
+ def reiniciar_partida():
+============
+[job-id] 9d984148a522459197242458529f53e6
+placarServer.py core/ReplaceBinaryOperator_Mul_Mod 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA % SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] a1455c60580f48cfb7b0fd33974facf8
+placarServer.py core/ReplaceBinaryOperator_Mul_Mod 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO % MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 6137a5f2831d4452bf014d3be18bb5aa
+placarServer.py core/ReplaceBinaryOperator_Mul_Mod 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -36,7 +36,7 @@
+ 
+ def obter_tempo_atual_ms():
+     """Retorna o timestamp atual em milissegundos."""
+-    return int(time.time() * MILISSEGUNDOS_POR_SEGUNDO)
++    return int(time.time() % MILISSEGUNDOS_POR_SEGUNDO)
+ 
+ 
+ def calcular_tempo_restante_cronometro():
+============
+[job-id] d77cb416fab7405c9d5937578ca5e8ec
+placarServer.py core/ReplaceBinaryOperator_Mul_Mod 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -109,7 +109,7 @@
+     if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+-    estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
++    estado_partida["tempo_restante_ms"] = tempo_em_segundos % MILISSEGUNDOS_POR_SEGUNDO
+ 
+ 
+ def reiniciar_partida():
+============
+[job-id] 2049efb69ca649b9a9d293ddc4beeef7
+placarServer.py core/ReplaceBinaryOperator_Mul_Pow 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA ** SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] f1a77a32073c4fcc9f808080064a0334
+placarServer.py core/ReplaceBinaryOperator_Mul_Pow 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO ** MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 00507e6c4ad44743b2a39c164bccaf7d
+placarServer.py core/ReplaceBinaryOperator_Mul_Pow 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -36,7 +36,7 @@
+ 
+ def obter_tempo_atual_ms():
+     """Retorna o timestamp atual em milissegundos."""
+-    return int(time.time() * MILISSEGUNDOS_POR_SEGUNDO)
++    return int(time.time() ** MILISSEGUNDOS_POR_SEGUNDO)
+ 
+ 
+ def calcular_tempo_restante_cronometro():
+============
+[job-id] 7c4356b3d5c240d597d5e98e680e90fc
+placarServer.py core/ReplaceBinaryOperator_Mul_Pow 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -109,7 +109,7 @@
+     if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+-    estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
++    estado_partida["tempo_restante_ms"] = tempo_em_segundos ** MILISSEGUNDOS_POR_SEGUNDO
+ 
+ 
+ def reiniciar_partida():
+============
+[job-id] 81ba1772578c4038a9ecd1d16e3bbee1
+placarServer.py core/ReplaceBinaryOperator_Mul_RShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA >> SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] e91f678d833f43efa4796cd02dc16a07
+placarServer.py core/ReplaceBinaryOperator_Mul_RShift 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO >> MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] eedd5b44935d4156bca7fc4914b66f3b
+placarServer.py core/ReplaceBinaryOperator_Mul_RShift 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -36,7 +36,7 @@
+ 
+ def obter_tempo_atual_ms():
+     """Retorna o timestamp atual em milissegundos."""
+-    return int(time.time() * MILISSEGUNDOS_POR_SEGUNDO)
++    return int(time.time() >> MILISSEGUNDOS_POR_SEGUNDO)
+ 
+ 
+ def calcular_tempo_restante_cronometro():
+============
+[job-id] 2effb9a7edc6432498cbcc77717cbc63
+placarServer.py core/ReplaceBinaryOperator_Mul_RShift 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -109,7 +109,7 @@
+     if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+-    estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
++    estado_partida["tempo_restante_ms"] = tempo_em_segundos >> MILISSEGUNDOS_POR_SEGUNDO
+ 
+ 
+ def reiniciar_partida():
+============
+[job-id] 1b12b170967e4810ab0e0f06351a5311
+placarServer.py core/ReplaceBinaryOperator_Mul_LShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA << SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] faa4411d0d264322b1d692ed9a6a4a93
+placarServer.py core/ReplaceBinaryOperator_Mul_LShift 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO << MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 0ca815d9fe134e108580812a94446d5e
+placarServer.py core/ReplaceBinaryOperator_Mul_LShift 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -36,7 +36,7 @@
+ 
+ def obter_tempo_atual_ms():
+     """Retorna o timestamp atual em milissegundos."""
+-    return int(time.time() * MILISSEGUNDOS_POR_SEGUNDO)
++    return int(time.time() << MILISSEGUNDOS_POR_SEGUNDO)
+ 
+ 
+ def calcular_tempo_restante_cronometro():
+============
+[job-id] f0a55c68a738494193aaf82caca8fa7f
+placarServer.py core/ReplaceBinaryOperator_Mul_LShift 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -109,7 +109,7 @@
+     if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+-    estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
++    estado_partida["tempo_restante_ms"] = tempo_em_segundos << MILISSEGUNDOS_POR_SEGUNDO
+ 
+ 
+ def reiniciar_partida():
+============
+[job-id] c748b99035454d399f62f47391bcf36f
+placarServer.py core/ReplaceBinaryOperator_Mul_BitOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA | SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 17ceddffa07540cb977c164e8f58cf68
+placarServer.py core/ReplaceBinaryOperator_Mul_BitOr 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO | MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 9e2fba7fcca147b284dcad3d794eef24
+placarServer.py core/ReplaceBinaryOperator_Mul_BitOr 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -36,7 +36,7 @@
+ 
+ def obter_tempo_atual_ms():
+     """Retorna o timestamp atual em milissegundos."""
+-    return int(time.time() * MILISSEGUNDOS_POR_SEGUNDO)
++    return int(time.time() | MILISSEGUNDOS_POR_SEGUNDO)
+ 
+ 
+ def calcular_tempo_restante_cronometro():
+============
+[job-id] 21ae2a9618ed4104a7b2bd6368fca49f
+placarServer.py core/ReplaceBinaryOperator_Mul_BitOr 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -109,7 +109,7 @@
+     if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+-    estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
++    estado_partida["tempo_restante_ms"] = tempo_em_segundos | MILISSEGUNDOS_POR_SEGUNDO
+ 
+ 
+ def reiniciar_partida():
+============
+[job-id] 0c87429f78524868868f0e5960a1672c
+placarServer.py core/ReplaceBinaryOperator_Mul_BitAnd 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA & SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 62f460f344b24a329f486dd8b9c05c4c
+placarServer.py core/ReplaceBinaryOperator_Mul_BitAnd 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO & MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 2a092e5e7660471dbc08b821dbd1e53b
+placarServer.py core/ReplaceBinaryOperator_Mul_BitAnd 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -36,7 +36,7 @@
+ 
+ def obter_tempo_atual_ms():
+     """Retorna o timestamp atual em milissegundos."""
+-    return int(time.time() * MILISSEGUNDOS_POR_SEGUNDO)
++    return int(time.time() & MILISSEGUNDOS_POR_SEGUNDO)
+ 
+ 
+ def calcular_tempo_restante_cronometro():
+============
+[job-id] d7694bee77d74cfea8550dbf172cc12a
+placarServer.py core/ReplaceBinaryOperator_Mul_BitAnd 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -109,7 +109,7 @@
+     if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+-    estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
++    estado_partida["tempo_restante_ms"] = tempo_em_segundos & MILISSEGUNDOS_POR_SEGUNDO
+ 
+ 
+ def reiniciar_partida():
+============
+[job-id] dba4ec592e014a11b1691584b52460c8
+placarServer.py core/ReplaceBinaryOperator_Mul_BitXor 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA ^ SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] bcf56f4d0dc84b628e48075a4053548b
+placarServer.py core/ReplaceBinaryOperator_Mul_BitXor 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -8,7 +8,7 @@
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+-    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
++    MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO ^ MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+ INDICE_TIME_A = 0
+============
+[job-id] 4551a62d05d548d8b88f9609defb27bd
+placarServer.py core/ReplaceBinaryOperator_Mul_BitXor 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -36,7 +36,7 @@
+ 
+ def obter_tempo_atual_ms():
+     """Retorna o timestamp atual em milissegundos."""
+-    return int(time.time() * MILISSEGUNDOS_POR_SEGUNDO)
++    return int(time.time() ^ MILISSEGUNDOS_POR_SEGUNDO)
+ 
+ 
+ def calcular_tempo_restante_cronometro():
+============
+[job-id] c459c5cf7f924583888f2202e208b732
+placarServer.py core/ReplaceBinaryOperator_Mul_BitXor 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -109,7 +109,7 @@
+     if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+-    estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
++    estado_partida["tempo_restante_ms"] = tempo_em_segundos ^ MILISSEGUNDOS_POR_SEGUNDO
+ 
+ 
+ def reiniciar_partida():
+============
+[job-id] 1e0bb403bf9040d68523026d7db750c0
+placarServer.py core/ReplaceBinaryOperator_Div_Add 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -15,7 +15,7 @@
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+-DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
++DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent + "static"
+ TIPOS_MIME_SUPORTADOS = {
+     ".html": "text/html; charset=utf-8",
+     ".css": "text/css; charset=utf-8",
+============
+[job-id] 3bc61b7d3619429b867b0b8f5e015d55
+placarServer.py core/ReplaceBinaryOperator_Div_Add 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -226,7 +226,7 @@
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+-        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
++        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS + nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+============
+[job-id] 9226cc8682924fb5a96932159efc8509
+placarServer.py core/ReplaceBinaryOperator_Div_Sub 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -15,7 +15,7 @@
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+-DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
++DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent - "static"
+ TIPOS_MIME_SUPORTADOS = {
+     ".html": "text/html; charset=utf-8",
+     ".css": "text/css; charset=utf-8",
+============
+[job-id] c516db6cc6b34159b6c8b2d9d376b673
+placarServer.py core/ReplaceBinaryOperator_Div_Sub 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -226,7 +226,7 @@
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+-        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
++        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS - nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+============
+[job-id] 18afbb09043c427bba03ad10bfc4d4a4
+placarServer.py core/ReplaceBinaryOperator_Div_Mul 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -15,7 +15,7 @@
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+-DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
++DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent * "static"
+ TIPOS_MIME_SUPORTADOS = {
+     ".html": "text/html; charset=utf-8",
+     ".css": "text/css; charset=utf-8",
+============
+[job-id] 6080d3ff728f458e8c4962b44a96657c
+placarServer.py core/ReplaceBinaryOperator_Div_Mul 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -226,7 +226,7 @@
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+-        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
++        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS * nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+============
+[job-id] fe38a596608a445e9beccd55f8d48b5d
+placarServer.py core/ReplaceBinaryOperator_Div_FloorDiv 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -15,7 +15,7 @@
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+-DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
++DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent // "static"
+ TIPOS_MIME_SUPORTADOS = {
+     ".html": "text/html; charset=utf-8",
+     ".css": "text/css; charset=utf-8",
+============
+[job-id] 6b0b9b39fa1f46cd90c434fb6d3d952a
+placarServer.py core/ReplaceBinaryOperator_Div_FloorDiv 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -226,7 +226,7 @@
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+-        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
++        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS // nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+============
+[job-id] d2c25c8e7fe545cb85fb8722fe27ccbd
+placarServer.py core/ReplaceBinaryOperator_Div_Mod 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -15,7 +15,7 @@
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+-DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
++DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent % "static"
+ TIPOS_MIME_SUPORTADOS = {
+     ".html": "text/html; charset=utf-8",
+     ".css": "text/css; charset=utf-8",
+============
+[job-id] 21705fa2bf8b4542a93a88a496cc301e
+placarServer.py core/ReplaceBinaryOperator_Div_Mod 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -226,7 +226,7 @@
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+-        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
++        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS % nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+============
+[job-id] 55f1532c827046698345923b329b17d0
+placarServer.py core/ReplaceBinaryOperator_Div_Pow 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -15,7 +15,7 @@
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+-DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
++DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent ** "static"
+ TIPOS_MIME_SUPORTADOS = {
+     ".html": "text/html; charset=utf-8",
+     ".css": "text/css; charset=utf-8",
+============
+[job-id] 27c77a4032f64c7bb649223c3e5931cd
+placarServer.py core/ReplaceBinaryOperator_Div_Pow 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -226,7 +226,7 @@
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+-        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
++        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS ** nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+============
+[job-id] 0c06048fbda44a77960f4d7c036c99d8
+placarServer.py core/ReplaceBinaryOperator_Div_RShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -15,7 +15,7 @@
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+-DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
++DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent >> "static"
+ TIPOS_MIME_SUPORTADOS = {
+     ".html": "text/html; charset=utf-8",
+     ".css": "text/css; charset=utf-8",
+============
+[job-id] 900ec2235a714316988e8c34d299ea61
+placarServer.py core/ReplaceBinaryOperator_Div_RShift 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -226,7 +226,7 @@
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+-        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
++        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS >> nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+============
+[job-id] b65a19d3d8c34e21ae00e5939cbd0f17
+placarServer.py core/ReplaceBinaryOperator_Div_LShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -15,7 +15,7 @@
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+-DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
++DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent << "static"
+ TIPOS_MIME_SUPORTADOS = {
+     ".html": "text/html; charset=utf-8",
+     ".css": "text/css; charset=utf-8",
+============
+[job-id] 2240c9a521c143a6b00b5a2d6c45d674
+placarServer.py core/ReplaceBinaryOperator_Div_LShift 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -226,7 +226,7 @@
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+-        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
++        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS << nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+============
+[job-id] a4fbf2b7751b4f7f8983f4ab0b1a9fdd
+placarServer.py core/ReplaceBinaryOperator_Div_BitOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -15,7 +15,7 @@
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+-DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
++DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent | "static"
+ TIPOS_MIME_SUPORTADOS = {
+     ".html": "text/html; charset=utf-8",
+     ".css": "text/css; charset=utf-8",
+============
+[job-id] de39455b53394691a36f18e43609b681
+placarServer.py core/ReplaceBinaryOperator_Div_BitOr 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -226,7 +226,7 @@
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+-        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
++        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS | nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+============
+[job-id] 9a1a3d591620475d8cf6f8bc22416456
+placarServer.py core/ReplaceBinaryOperator_Div_BitAnd 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -15,7 +15,7 @@
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+-DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
++DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent & "static"
+ TIPOS_MIME_SUPORTADOS = {
+     ".html": "text/html; charset=utf-8",
+     ".css": "text/css; charset=utf-8",
+============
+[job-id] e66ef2089aae4e85929ee1d062106030
+placarServer.py core/ReplaceBinaryOperator_Div_BitAnd 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -226,7 +226,7 @@
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+-        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
++        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS & nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+============
+[job-id] 99821923f01f47c99045b55c609754f8
+placarServer.py core/ReplaceBinaryOperator_Div_BitXor 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -15,7 +15,7 @@
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+-DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
++DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent ^ "static"
+ TIPOS_MIME_SUPORTADOS = {
+     ".html": "text/html; charset=utf-8",
+     ".css": "text/css; charset=utf-8",
+============
+[job-id] e6841b1c2b2c44cd8a2c7ccf638b0018
+placarServer.py core/ReplaceBinaryOperator_Div_BitXor 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -226,7 +226,7 @@
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+-        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
++        caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS ^ nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+============
+[job-id] 91c56b5c5b6b40038da1dfe474e3ca12
+placarServer.py core/ReplaceComparisonOperator_Eq_NotEq 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -152,7 +152,7 @@
+ 
+     acao = parametros_rota[0]
+ 
+-    if acao == "pontos":
++    if acao != "pontos":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] 0ddddb27c92b4e6aafbba20ea702ef9b
+placarServer.py core/ReplaceComparisonOperator_Eq_NotEq 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -157,7 +157,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "faltas":
++    if acao != "faltas":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] e7ac701d377d457a8a0010e297563e4f
+placarServer.py core/ReplaceComparisonOperator_Eq_NotEq 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -162,7 +162,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "iniciar":
++    if acao != "iniciar":
+         return iniciar_cronometro()
+ 
+     if acao == "pausar":
+============
+[job-id] 6e6b9a2e186746e8966237a9adf0cee1
+placarServer.py core/ReplaceComparisonOperator_Eq_NotEq 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -165,7 +165,7 @@
+     if acao == "iniciar":
+         return iniciar_cronometro()
+ 
+-    if acao == "pausar":
++    if acao != "pausar":
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+============
+[job-id] 7f40aaf6136445649886dd6f5f13ebb2
+placarServer.py core/ReplaceComparisonOperator_Eq_NotEq 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -168,7 +168,7 @@
+     if acao == "pausar":
+         return pausar_cronometro()
+ 
+-    if acao == "definir_tempo":
++    if acao != "definir_tempo":
+         if len(parametros_rota) < 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+============
+[job-id] e5bbd7d195064c06a246c736812ea9f3
+placarServer.py core/ReplaceComparisonOperator_Eq_NotEq 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -173,7 +173,7 @@
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+-    if acao == "reiniciar":
++    if acao != "reiniciar":
+         return reiniciar_partida()
+ 
+     raise ValueError(f"AþÒo desconhecida solicitada: '{acao}'")
+============
+[job-id] 1592fcb54fef4d0186649cb108f84915
+placarServer.py core/ReplaceComparisonOperator_Eq_NotEq 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -225,7 +225,7 @@
+             )
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+-        nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
++        nome_arquivo = "index.html" if caminho_url != "/" else caminho_url.lstrip("/")
+         caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+============
+[job-id] 93e6d3ee542b41d2b00783d3b37d777f
+placarServer.py core/ReplaceComparisonOperator_Eq_NotEq 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -256,7 +256,7 @@
+         pass
+ 
+ 
+-if __name__ == "__main__":
++if __name__ != "__main__":
+     HOST_SERVIDOR = "0.0.0.0"
+     PORTA_SERVIDOR = 8000
+ 
+============
+[job-id] d0b9397d787f493aaf7ada7fddcbaca6
+placarServer.py core/ReplaceComparisonOperator_Eq_Lt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -152,7 +152,7 @@
+ 
+     acao = parametros_rota[0]
+ 
+-    if acao == "pontos":
++    if acao < "pontos":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] aea432e8323c43f5ab2a2cebed67e37a
+placarServer.py core/ReplaceComparisonOperator_Eq_Lt 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -157,7 +157,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "faltas":
++    if acao < "faltas":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] 9df115ef304c494ca4c9669ad53de640
+placarServer.py core/ReplaceComparisonOperator_Eq_Lt 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -162,7 +162,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "iniciar":
++    if acao < "iniciar":
+         return iniciar_cronometro()
+ 
+     if acao == "pausar":
+============
+[job-id] 51378aac97084a5287436bc634b4146f
+placarServer.py core/ReplaceComparisonOperator_Eq_Lt 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -165,7 +165,7 @@
+     if acao == "iniciar":
+         return iniciar_cronometro()
+ 
+-    if acao == "pausar":
++    if acao < "pausar":
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+============
+[job-id] 2d72e7ab8c3448b79962d054e7e912c0
+placarServer.py core/ReplaceComparisonOperator_Eq_Lt 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -168,7 +168,7 @@
+     if acao == "pausar":
+         return pausar_cronometro()
+ 
+-    if acao == "definir_tempo":
++    if acao < "definir_tempo":
+         if len(parametros_rota) < 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+============
+[job-id] a1da522309e14e538896b576a6720abd
+placarServer.py core/ReplaceComparisonOperator_Eq_Lt 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -173,7 +173,7 @@
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+-    if acao == "reiniciar":
++    if acao < "reiniciar":
+         return reiniciar_partida()
+ 
+     raise ValueError(f"AþÒo desconhecida solicitada: '{acao}'")
+============
+[job-id] ae279461749f4ce481a59b89a554ae91
+placarServer.py core/ReplaceComparisonOperator_Eq_Lt 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -225,7 +225,7 @@
+             )
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+-        nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
++        nome_arquivo = "index.html" if caminho_url < "/" else caminho_url.lstrip("/")
+         caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+============
+[job-id] 178fa6e0d3f940ad9a78b9749093d79c
+placarServer.py core/ReplaceComparisonOperator_Eq_Lt 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -256,7 +256,7 @@
+         pass
+ 
+ 
+-if __name__ == "__main__":
++if __name__ < "__main__":
+     HOST_SERVIDOR = "0.0.0.0"
+     PORTA_SERVIDOR = 8000
+ 
+============
+[job-id] f0c9055155314af19e208bb9159d917f
+placarServer.py core/ReplaceComparisonOperator_Eq_LtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -152,7 +152,7 @@
+ 
+     acao = parametros_rota[0]
+ 
+-    if acao == "pontos":
++    if acao <= "pontos":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] 3c4a4c490921443d97250f273e2b7cf0
+placarServer.py core/ReplaceComparisonOperator_Eq_LtE 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -157,7 +157,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "faltas":
++    if acao <= "faltas":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] e1047dea3c1c44a486797531a0a88f52
+placarServer.py core/ReplaceComparisonOperator_Eq_LtE 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -162,7 +162,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "iniciar":
++    if acao <= "iniciar":
+         return iniciar_cronometro()
+ 
+     if acao == "pausar":
+============
+[job-id] 53190964ee3648b9b0225ac1ecd78ed4
+placarServer.py core/ReplaceComparisonOperator_Eq_LtE 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -165,7 +165,7 @@
+     if acao == "iniciar":
+         return iniciar_cronometro()
+ 
+-    if acao == "pausar":
++    if acao <= "pausar":
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+============
+[job-id] f1da9876b58c4fe4ad9e37b4a2f73463
+placarServer.py core/ReplaceComparisonOperator_Eq_LtE 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -168,7 +168,7 @@
+     if acao == "pausar":
+         return pausar_cronometro()
+ 
+-    if acao == "definir_tempo":
++    if acao <= "definir_tempo":
+         if len(parametros_rota) < 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+============
+[job-id] b94c2acf47ff4e70ac5f6d168cb9fbd0
+placarServer.py core/ReplaceComparisonOperator_Eq_LtE 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -173,7 +173,7 @@
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+-    if acao == "reiniciar":
++    if acao <= "reiniciar":
+         return reiniciar_partida()
+ 
+     raise ValueError(f"AþÒo desconhecida solicitada: '{acao}'")
+============
+[job-id] 7f198d4f64ca486b80e8d3ba04aacee3
+placarServer.py core/ReplaceComparisonOperator_Eq_LtE 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -225,7 +225,7 @@
+             )
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+-        nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
++        nome_arquivo = "index.html" if caminho_url <= "/" else caminho_url.lstrip("/")
+         caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+============
+[job-id] 928a8cadfafb4d70b5c623d9428ba554
+placarServer.py core/ReplaceComparisonOperator_Eq_LtE 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -256,7 +256,7 @@
+         pass
+ 
+ 
+-if __name__ == "__main__":
++if __name__ <= "__main__":
+     HOST_SERVIDOR = "0.0.0.0"
+     PORTA_SERVIDOR = 8000
+ 
+============
+[job-id] 6bc9c69cef0745d99b6d1c0005dffcc0
+placarServer.py core/ReplaceComparisonOperator_Eq_Gt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -152,7 +152,7 @@
+ 
+     acao = parametros_rota[0]
+ 
+-    if acao == "pontos":
++    if acao > "pontos":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] 26d3a145c19044fcb8298c565295228a
+placarServer.py core/ReplaceComparisonOperator_Eq_Gt 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -157,7 +157,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "faltas":
++    if acao > "faltas":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] 19e9185c4dc34199b44d3676cc39d0c5
+placarServer.py core/ReplaceComparisonOperator_Eq_Gt 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -162,7 +162,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "iniciar":
++    if acao > "iniciar":
+         return iniciar_cronometro()
+ 
+     if acao == "pausar":
+============
+[job-id] f0eef0ad0f824602ae8776acefa175d8
+placarServer.py core/ReplaceComparisonOperator_Eq_Gt 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -165,7 +165,7 @@
+     if acao == "iniciar":
+         return iniciar_cronometro()
+ 
+-    if acao == "pausar":
++    if acao > "pausar":
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+============
+[job-id] f32932a7c1c5429baca462fc38a00b8d
+placarServer.py core/ReplaceComparisonOperator_Eq_Gt 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -168,7 +168,7 @@
+     if acao == "pausar":
+         return pausar_cronometro()
+ 
+-    if acao == "definir_tempo":
++    if acao > "definir_tempo":
+         if len(parametros_rota) < 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+============
+[job-id] 6485fa6a8c6f48659864c2f5844c69e6
+placarServer.py core/ReplaceComparisonOperator_Eq_Gt 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -173,7 +173,7 @@
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+-    if acao == "reiniciar":
++    if acao > "reiniciar":
+         return reiniciar_partida()
+ 
+     raise ValueError(f"AþÒo desconhecida solicitada: '{acao}'")
+============
+[job-id] 10a3ccca8aba4554906031edf30b600c
+placarServer.py core/ReplaceComparisonOperator_Eq_Gt 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -225,7 +225,7 @@
+             )
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+-        nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
++        nome_arquivo = "index.html" if caminho_url > "/" else caminho_url.lstrip("/")
+         caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+============
+[job-id] 486689be7c3941f09a760525ec6713ac
+placarServer.py core/ReplaceComparisonOperator_Eq_Gt 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -256,7 +256,7 @@
+         pass
+ 
+ 
+-if __name__ == "__main__":
++if __name__ > "__main__":
+     HOST_SERVIDOR = "0.0.0.0"
+     PORTA_SERVIDOR = 8000
+ 
+============
+[job-id] 191b72b58fe64a79819a5a77d6921e38
+placarServer.py core/ReplaceComparisonOperator_Eq_GtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -152,7 +152,7 @@
+ 
+     acao = parametros_rota[0]
+ 
+-    if acao == "pontos":
++    if acao >= "pontos":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] a77d3e9b6ae14e55aab7c587bf8a61b8
+placarServer.py core/ReplaceComparisonOperator_Eq_GtE 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -157,7 +157,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "faltas":
++    if acao >= "faltas":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] 9416f9577da540f19f21b9e020dba229
+placarServer.py core/ReplaceComparisonOperator_Eq_GtE 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -162,7 +162,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "iniciar":
++    if acao >= "iniciar":
+         return iniciar_cronometro()
+ 
+     if acao == "pausar":
+============
+[job-id] 140eea7b36314126b0f174a4408a4c1d
+placarServer.py core/ReplaceComparisonOperator_Eq_GtE 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -165,7 +165,7 @@
+     if acao == "iniciar":
+         return iniciar_cronometro()
+ 
+-    if acao == "pausar":
++    if acao >= "pausar":
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+============
+[job-id] 9cdca44b4143496696424692938f84d5
+placarServer.py core/ReplaceComparisonOperator_Eq_GtE 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -168,7 +168,7 @@
+     if acao == "pausar":
+         return pausar_cronometro()
+ 
+-    if acao == "definir_tempo":
++    if acao >= "definir_tempo":
+         if len(parametros_rota) < 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+============
+[job-id] a6f233ebcaeb47d09000226f5850e1e4
+placarServer.py core/ReplaceComparisonOperator_Eq_GtE 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -173,7 +173,7 @@
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+-    if acao == "reiniciar":
++    if acao >= "reiniciar":
+         return reiniciar_partida()
+ 
+     raise ValueError(f"AþÒo desconhecida solicitada: '{acao}'")
+============
+[job-id] 2921afef77404b36a768beceaab1c5a0
+placarServer.py core/ReplaceComparisonOperator_Eq_GtE 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -225,7 +225,7 @@
+             )
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+-        nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
++        nome_arquivo = "index.html" if caminho_url >= "/" else caminho_url.lstrip("/")
+         caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+============
+[job-id] e81aaf9403d64458a1cbcc19e4d7a49e
+placarServer.py core/ReplaceComparisonOperator_Eq_GtE 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -256,7 +256,7 @@
+         pass
+ 
+ 
+-if __name__ == "__main__":
++if __name__ >= "__main__":
+     HOST_SERVIDOR = "0.0.0.0"
+     PORTA_SERVIDOR = 8000
+ 
+============
+[job-id] d369e13c0767451e98571eb0bf1d390e
+placarServer.py core/ReplaceComparisonOperator_Eq_Is 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -152,7 +152,7 @@
+ 
+     acao = parametros_rota[0]
+ 
+-    if acao == "pontos":
++    if acao is "pontos":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] 8c6f7bb95a9b4d5299d3f68bd34d7347
+placarServer.py core/ReplaceComparisonOperator_Eq_Is 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -157,7 +157,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "faltas":
++    if acao is "faltas":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] c4c263840cb84da5b5e2fa386385dfea
+placarServer.py core/ReplaceComparisonOperator_Eq_Is 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -162,7 +162,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "iniciar":
++    if acao is "iniciar":
+         return iniciar_cronometro()
+ 
+     if acao == "pausar":
+============
+[job-id] 66bb12895a924c638029d84b4aeb0045
+placarServer.py core/ReplaceComparisonOperator_Eq_Is 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -165,7 +165,7 @@
+     if acao == "iniciar":
+         return iniciar_cronometro()
+ 
+-    if acao == "pausar":
++    if acao is "pausar":
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+============
+[job-id] 2da1a15740014637a499db9d457bb76c
+placarServer.py core/ReplaceComparisonOperator_Eq_Is 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -168,7 +168,7 @@
+     if acao == "pausar":
+         return pausar_cronometro()
+ 
+-    if acao == "definir_tempo":
++    if acao is "definir_tempo":
+         if len(parametros_rota) < 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+============
+[job-id] 80dddaa0537c4e359da991398321b8f6
+placarServer.py core/ReplaceComparisonOperator_Eq_Is 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -173,7 +173,7 @@
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+-    if acao == "reiniciar":
++    if acao is "reiniciar":
+         return reiniciar_partida()
+ 
+     raise ValueError(f"AþÒo desconhecida solicitada: '{acao}'")
+============
+[job-id] 7a77fdcd45934485b3e8e6636f3de833
+placarServer.py core/ReplaceComparisonOperator_Eq_Is 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -225,7 +225,7 @@
+             )
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+-        nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
++        nome_arquivo = "index.html" if caminho_url is "/" else caminho_url.lstrip("/")
+         caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+============
+[job-id] f7bbb35616ab417399241ef8a459db41
+placarServer.py core/ReplaceComparisonOperator_Eq_Is 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -256,7 +256,7 @@
+         pass
+ 
+ 
+-if __name__ == "__main__":
++if __name__ is "__main__":
+     HOST_SERVIDOR = "0.0.0.0"
+     PORTA_SERVIDOR = 8000
+ 
+============
+[job-id] 26e1acd266e94a6ba2145b91d761b9ec
+placarServer.py core/ReplaceComparisonOperator_Eq_IsNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -152,7 +152,7 @@
+ 
+     acao = parametros_rota[0]
+ 
+-    if acao == "pontos":
++    if acao is not "pontos":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] 626d86de8f074517866961c71e512e3f
+placarServer.py core/ReplaceComparisonOperator_Eq_IsNot 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -157,7 +157,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "faltas":
++    if acao is not "faltas":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] 59fd3d3cd5ea464e878dcd120a86338d
+placarServer.py core/ReplaceComparisonOperator_Eq_IsNot 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -162,7 +162,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "iniciar":
++    if acao is not "iniciar":
+         return iniciar_cronometro()
+ 
+     if acao == "pausar":
+============
+[job-id] e80f6c814c8c4ed0b8a1265421819a77
+placarServer.py core/ReplaceComparisonOperator_Eq_IsNot 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -165,7 +165,7 @@
+     if acao == "iniciar":
+         return iniciar_cronometro()
+ 
+-    if acao == "pausar":
++    if acao is not "pausar":
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+============
+[job-id] e7ad819a63c641d5b0252c396f6d3c6a
+placarServer.py core/ReplaceComparisonOperator_Eq_IsNot 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -168,7 +168,7 @@
+     if acao == "pausar":
+         return pausar_cronometro()
+ 
+-    if acao == "definir_tempo":
++    if acao is not "definir_tempo":
+         if len(parametros_rota) < 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+============
+[job-id] 047959ee1f4c4f48b916da62a69ba2b5
+placarServer.py core/ReplaceComparisonOperator_Eq_IsNot 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -173,7 +173,7 @@
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+-    if acao == "reiniciar":
++    if acao is not "reiniciar":
+         return reiniciar_partida()
+ 
+     raise ValueError(f"AþÒo desconhecida solicitada: '{acao}'")
+============
+[job-id] 840a134c0a2c479f81ac61d55329997d
+placarServer.py core/ReplaceComparisonOperator_Eq_IsNot 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -225,7 +225,7 @@
+             )
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+-        nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
++        nome_arquivo = "index.html" if caminho_url is not "/" else caminho_url.lstrip("/")
+         caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+============
+[job-id] d616c84bc7f240a283b58252abd7195b
+placarServer.py core/ReplaceComparisonOperator_Eq_IsNot 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -256,7 +256,7 @@
+         pass
+ 
+ 
+-if __name__ == "__main__":
++if __name__ is not "__main__":
+     HOST_SERVIDOR = "0.0.0.0"
+     PORTA_SERVIDOR = 8000
+ 
+============
+[job-id] 498be56f1f0b4db19a79f89e36d3efda
+placarServer.py core/ReplaceComparisonOperator_Lt_Eq 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -106,7 +106,7 @@
+ 
+     if estado_partida["em_andamento"]:
+         return
+-    if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
++    if tempo_em_segundos == TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+     estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
+============
+[job-id] 8f8c37f8890d4322919f8118f2f18510
+placarServer.py core/ReplaceComparisonOperator_Lt_Eq 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -153,7 +153,7 @@
+     acao = parametros_rota[0]
+ 
+     if acao == "pontos":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) == 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] 922130fff8284dd5b68edca56f9d7e6e
+placarServer.py core/ReplaceComparisonOperator_Lt_Eq 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -158,7 +158,7 @@
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+     if acao == "faltas":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) == 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] 69718c51bda74916af0241e246056ec5
+placarServer.py core/ReplaceComparisonOperator_Lt_Eq 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -169,7 +169,7 @@
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+-        if len(parametros_rota) < 2:
++        if len(parametros_rota) == 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+============
+[job-id] a6bd38e301a7427d88a5cbb6b2850fda
+placarServer.py core/ReplaceComparisonOperator_Lt_NotEq 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -106,7 +106,7 @@
+ 
+     if estado_partida["em_andamento"]:
+         return
+-    if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
++    if tempo_em_segundos != TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+     estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
+============
+[job-id] 93bdb7996a8547de9474b6cb06a60543
+placarServer.py core/ReplaceComparisonOperator_Lt_NotEq 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -153,7 +153,7 @@
+     acao = parametros_rota[0]
+ 
+     if acao == "pontos":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) != 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] cd260e99dadf4699bd3ca6081f396a1d
+placarServer.py core/ReplaceComparisonOperator_Lt_NotEq 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -158,7 +158,7 @@
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+     if acao == "faltas":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) != 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] c6c14e4a57bb449d8ec6035918974e3a
+placarServer.py core/ReplaceComparisonOperator_Lt_NotEq 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -169,7 +169,7 @@
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+-        if len(parametros_rota) < 2:
++        if len(parametros_rota) != 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+============
+[job-id] 5a486783b4cd4dd9a239fec0a1b1b41c
+placarServer.py core/ReplaceComparisonOperator_Lt_LtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -106,7 +106,7 @@
+ 
+     if estado_partida["em_andamento"]:
+         return
+-    if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
++    if tempo_em_segundos <= TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+     estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
+============
+[job-id] aefcae86fe284e6b9a9fd8cfa0d930f6
+placarServer.py core/ReplaceComparisonOperator_Lt_LtE 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -153,7 +153,7 @@
+     acao = parametros_rota[0]
+ 
+     if acao == "pontos":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) <= 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] 29f6abab7f284fc890507a4afd09492f
+placarServer.py core/ReplaceComparisonOperator_Lt_LtE 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -158,7 +158,7 @@
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+     if acao == "faltas":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) <= 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] f0c6cad65cf644ad91c67a14123912ae
+placarServer.py core/ReplaceComparisonOperator_Lt_LtE 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -169,7 +169,7 @@
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+-        if len(parametros_rota) < 2:
++        if len(parametros_rota) <= 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+============
+[job-id] 8e4b479903524443962486c4919aeb6c
+placarServer.py core/ReplaceComparisonOperator_Lt_Gt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -106,7 +106,7 @@
+ 
+     if estado_partida["em_andamento"]:
+         return
+-    if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
++    if tempo_em_segundos > TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+     estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
+============
+[job-id] aa014b38172046fd95bac1b43117fee7
+placarServer.py core/ReplaceComparisonOperator_Lt_Gt 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -153,7 +153,7 @@
+     acao = parametros_rota[0]
+ 
+     if acao == "pontos":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) > 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] 5d70c90b767c4b149a6dca0de2ad6f41
+placarServer.py core/ReplaceComparisonOperator_Lt_Gt 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -158,7 +158,7 @@
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+     if acao == "faltas":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) > 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] 3b7ae631596a4f7a9f0f1f11144bd2c9
+placarServer.py core/ReplaceComparisonOperator_Lt_Gt 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -169,7 +169,7 @@
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+-        if len(parametros_rota) < 2:
++        if len(parametros_rota) > 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+============
+[job-id] d86dbdceb81e45ce99c923321bc83a2f
+placarServer.py core/ReplaceComparisonOperator_Lt_GtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -106,7 +106,7 @@
+ 
+     if estado_partida["em_andamento"]:
+         return
+-    if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
++    if tempo_em_segundos >= TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+     estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
+============
+[job-id] 9dca67bf054f4785b40b40f953e1e161
+placarServer.py core/ReplaceComparisonOperator_Lt_GtE 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -153,7 +153,7 @@
+     acao = parametros_rota[0]
+ 
+     if acao == "pontos":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) >= 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] ce83540d0b514aa3822257591ec756d8
+placarServer.py core/ReplaceComparisonOperator_Lt_GtE 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -158,7 +158,7 @@
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+     if acao == "faltas":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) >= 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] fb52495179b246d9958fa53530d6b29d
+placarServer.py core/ReplaceComparisonOperator_Lt_GtE 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -169,7 +169,7 @@
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+-        if len(parametros_rota) < 2:
++        if len(parametros_rota) >= 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+============
+[job-id] 3845c5fed2084a45a3fd95e13e6312b9
+placarServer.py core/ReplaceComparisonOperator_Lt_Is 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -106,7 +106,7 @@
+ 
+     if estado_partida["em_andamento"]:
+         return
+-    if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
++    if tempo_em_segundos is TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+     estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
+============
+[job-id] aa936db8ab1a47d589b509cf0164be58
+placarServer.py core/ReplaceComparisonOperator_Lt_IsNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -106,7 +106,7 @@
+ 
+     if estado_partida["em_andamento"]:
+         return
+-    if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
++    if tempo_em_segundos is not TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+     estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
+============
+[job-id] e352be80bbf042eeb5a40c19359d5e00
+placarServer.py core/ReplaceComparisonOperator_LtE_Eq 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -49,7 +49,7 @@
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+-    if tempo_restante <= TEMPO_ESGOTADO_MS:
++    if tempo_restante == TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+         estado_partida["em_andamento"] = False
+         return TEMPO_ESGOTADO_MS
+============
+[job-id] ee29c85fd96b48a1a37df8ec6781a347
+placarServer.py core/ReplaceComparisonOperator_LtE_Eq 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -87,7 +87,7 @@
+     """Inicia o cron¶metro da partida."""
+     if estado_partida["em_andamento"]:
+         return
+-    if calcular_tempo_restante_cronometro() <= 0:
++    if calcular_tempo_restante_cronometro() == 0:
+         return
+ 
+     estado_partida["inicio_cronometro_ms"] = obter_tempo_atual_ms()
+============
+[job-id] 33e279e148b34843b7e0d30a34f81e17
+placarServer.py core/ReplaceComparisonOperator_LtE_NotEq 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -49,7 +49,7 @@
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+-    if tempo_restante <= TEMPO_ESGOTADO_MS:
++    if tempo_restante != TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+         estado_partida["em_andamento"] = False
+         return TEMPO_ESGOTADO_MS
+============
+[job-id] 12686aef006a4d2e8a205bc7240a7c4d
+placarServer.py core/ReplaceComparisonOperator_LtE_NotEq 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -87,7 +87,7 @@
+     """Inicia o cron¶metro da partida."""
+     if estado_partida["em_andamento"]:
+         return
+-    if calcular_tempo_restante_cronometro() <= 0:
++    if calcular_tempo_restante_cronometro() != 0:
+         return
+ 
+     estado_partida["inicio_cronometro_ms"] = obter_tempo_atual_ms()
+============
+[job-id] a93dc5ad44f448ffa817ca1b2a228543
+placarServer.py core/ReplaceComparisonOperator_LtE_Lt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -49,7 +49,7 @@
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+-    if tempo_restante <= TEMPO_ESGOTADO_MS:
++    if tempo_restante < TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+         estado_partida["em_andamento"] = False
+         return TEMPO_ESGOTADO_MS
+============
+[job-id] 6c070cd122b643e7889ab8e8972b0394
+placarServer.py core/ReplaceComparisonOperator_LtE_Lt 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -87,7 +87,7 @@
+     """Inicia o cron¶metro da partida."""
+     if estado_partida["em_andamento"]:
+         return
+-    if calcular_tempo_restante_cronometro() <= 0:
++    if calcular_tempo_restante_cronometro() < 0:
+         return
+ 
+     estado_partida["inicio_cronometro_ms"] = obter_tempo_atual_ms()
+============
+[job-id] 3c78008bf106417fb3972b30b4946e3d
+placarServer.py core/ReplaceComparisonOperator_LtE_Gt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -49,7 +49,7 @@
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+-    if tempo_restante <= TEMPO_ESGOTADO_MS:
++    if tempo_restante > TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+         estado_partida["em_andamento"] = False
+         return TEMPO_ESGOTADO_MS
+============
+[job-id] 812b9deb8c2541208e1b240f633128d9
+placarServer.py core/ReplaceComparisonOperator_LtE_Gt 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -87,7 +87,7 @@
+     """Inicia o cron¶metro da partida."""
+     if estado_partida["em_andamento"]:
+         return
+-    if calcular_tempo_restante_cronometro() <= 0:
++    if calcular_tempo_restante_cronometro() > 0:
+         return
+ 
+     estado_partida["inicio_cronometro_ms"] = obter_tempo_atual_ms()
+============
+[job-id] c4ea6fc1c7a445cbae875d00388a5dc7
+placarServer.py core/ReplaceComparisonOperator_LtE_GtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -49,7 +49,7 @@
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+-    if tempo_restante <= TEMPO_ESGOTADO_MS:
++    if tempo_restante >= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+         estado_partida["em_andamento"] = False
+         return TEMPO_ESGOTADO_MS
+============
+[job-id] bf4d237375774ab3ae5c2c8e0b43dd16
+placarServer.py core/ReplaceComparisonOperator_LtE_GtE 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -87,7 +87,7 @@
+     """Inicia o cron¶metro da partida."""
+     if estado_partida["em_andamento"]:
+         return
+-    if calcular_tempo_restante_cronometro() <= 0:
++    if calcular_tempo_restante_cronometro() >= 0:
+         return
+ 
+     estado_partida["inicio_cronometro_ms"] = obter_tempo_atual_ms()
+============
+[job-id] ee9cff2e64b74085a0e543e94f3e082f
+placarServer.py core/ReplaceComparisonOperator_LtE_Is 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -49,7 +49,7 @@
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+-    if tempo_restante <= TEMPO_ESGOTADO_MS:
++    if tempo_restante is TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+         estado_partida["em_andamento"] = False
+         return TEMPO_ESGOTADO_MS
+============
+[job-id] 6af7a5a72a564574b2fd04a5f4af6411
+placarServer.py core/ReplaceComparisonOperator_LtE_IsNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -49,7 +49,7 @@
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+-    if tempo_restante <= TEMPO_ESGOTADO_MS:
++    if tempo_restante is not TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+         estado_partida["em_andamento"] = False
+         return TEMPO_ESGOTADO_MS
+============
+[job-id] 24613fb195a44986a690d72912a9681f
+placarServer.py core/ReplaceUnaryOperator_Delete_Not 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -43,7 +43,7 @@
+     """Calcula o tempo restante no cron¶metro da partida."""
+     TEMPO_ESGOTADO_MS = 0
+ 
+-    if not estado_partida["em_andamento"]:
++    if  estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+============
+[job-id] 0fcd67cef0294206bf13fab4866e384d
+placarServer.py core/ReplaceUnaryOperator_Delete_Not 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -147,7 +147,7 @@
+ 
+ def processar_comando_partida(parametros_rota):
+     """Valida entradas e mapeia aþ§es. Lanþa ValueError para entradas excepcionais/invßlidas."""
+-    if not parametros_rota:
++    if  parametros_rota:
+         return
+ 
+     acao = parametros_rota[0]
+============
+[job-id] d9994498b9aa4def904cf251c8de1532
+placarServer.py core/ReplaceUnaryOperator_Delete_Not 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -228,7 +228,7 @@
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+         caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
+ 
+-        if not self.eh_caminho_estatico_valido(caminho_arquivo):
++        if  self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+ 
+         try:
+============
+[job-id] 72b452263fd9481488e2e9dceba1033e
+placarServer.py core/AddNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -43,7 +43,7 @@
+     """Calcula o tempo restante no cron¶metro da partida."""
+     TEMPO_ESGOTADO_MS = 0
+ 
+-    if not estado_partida["em_andamento"]:
++    if not not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+ 
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+============
+[job-id] fbc7d693b1f64571a22b30b6ccedaa21
+placarServer.py core/AddNot 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -49,7 +49,7 @@
+     tempo_decorrido = obter_tempo_atual_ms() - estado_partida["inicio_cronometro_ms"]
+     tempo_restante = estado_partida["tempo_restante_ms"] - tempo_decorrido
+ 
+-    if tempo_restante <= TEMPO_ESGOTADO_MS:
++    if not tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+         estado_partida["em_andamento"] = False
+         return TEMPO_ESGOTADO_MS
+============
+[job-id] bb904bc9332b47d0ad771c7c5fb2605c
+placarServer.py core/AddNot 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -61,7 +61,7 @@
+     """Registra a variaþÒo de pontos mantendo o comportamento dentro do fluxo normal."""
+     VALOR_MINIMO_PONTOS = 0
+ 
+-    if indice_equipe not in (INDICE_TIME_A, INDICE_TIME_B):
++    if not indice_equipe not in (INDICE_TIME_A, INDICE_TIME_B):
+         return
+ 
+     pontos_atuais = estado_partida["pontos"][indice_equipe]
+============
+[job-id] fbda78a1aa4d49448c68193962573616
+placarServer.py core/AddNot 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -74,7 +74,7 @@
+     """Registra a variaþÒo de faltas mantendo o comportamento dentro do fluxo normal."""
+     VALOR_MINIMO_FALTAS = 0
+ 
+-    if indice_equipe not in (INDICE_TIME_A, INDICE_TIME_B):
++    if not indice_equipe not in (INDICE_TIME_A, INDICE_TIME_B):
+         return
+ 
+     faltas_atuais = estado_partida["faltas"][indice_equipe]
+============
+[job-id] 3978997546504984988640b44d3dbf58
+placarServer.py core/AddNot 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -85,7 +85,7 @@
+ 
+ def iniciar_cronometro():
+     """Inicia o cron¶metro da partida."""
+-    if estado_partida["em_andamento"]:
++    if not estado_partida["em_andamento"]:
+         return
+     if calcular_tempo_restante_cronometro() <= 0:
+         return
+============
+[job-id] f9a090ed41464eca9d81aeed6f60d701
+placarServer.py core/AddNot 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -87,7 +87,7 @@
+     """Inicia o cron¶metro da partida."""
+     if estado_partida["em_andamento"]:
+         return
+-    if calcular_tempo_restante_cronometro() <= 0:
++    if not calcular_tempo_restante_cronometro() <= 0:
+         return
+ 
+     estado_partida["inicio_cronometro_ms"] = obter_tempo_atual_ms()
+============
+[job-id] b1f4104fa9de41fe8e232c72fd9abf45
+placarServer.py core/AddNot 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -104,7 +104,7 @@
+     """Define a duraþÒo da partida."""
+     TEMPO_MINIMO_SEGUNDOS = 0
+ 
+-    if estado_partida["em_andamento"]:
++    if not estado_partida["em_andamento"]:
+         return
+     if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+============
+[job-id] 08ab0e8a03f04bc9b82178154eed7942
+placarServer.py core/AddNot 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -106,7 +106,7 @@
+ 
+     if estado_partida["em_andamento"]:
+         return
+-    if tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
++    if not tempo_em_segundos < TEMPO_MINIMO_SEGUNDOS:
+         return
+ 
+     estado_partida["tempo_restante_ms"] = tempo_em_segundos * MILISSEGUNDOS_POR_SEGUNDO
+============
+[job-id] bbfff61bf4754e948659816b8d277215
+placarServer.py core/AddNot 8
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -128,7 +128,7 @@
+     faltas_time_a = estado_partida["faltas"][INDICE_TIME_A]
+     faltas_time_b = estado_partida["faltas"][INDICE_TIME_B]
+     tempo_restante = calcular_tempo_restante_cronometro()
+-    em_andamento_texto = "true" if estado_partida["em_andamento"] else "false"
++    em_andamento_texto = "true" if not estado_partida["em_andamento"] else "false"
+ 
+     return (
+         f'{{"pontos": [{pontos_time_a}, {pontos_time_b}], '
+============
+[job-id] 30dd6c304306421194689d5718de56cc
+placarServer.py core/AddNot 9
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -147,7 +147,7 @@
+ 
+ def processar_comando_partida(parametros_rota):
+     """Valida entradas e mapeia aþ§es. Lanþa ValueError para entradas excepcionais/invßlidas."""
+-    if not parametros_rota:
++    if not not parametros_rota:
+         return
+ 
+     acao = parametros_rota[0]
+============
+[job-id] 3ae92eabe4e44e17ba5a61066dfc66e2
+placarServer.py core/AddNot 10
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -152,7 +152,7 @@
+ 
+     acao = parametros_rota[0]
+ 
+-    if acao == "pontos":
++    if not acao == "pontos":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] 1d4093ae575c45028a5adbc2da96d570
+placarServer.py core/AddNot 11
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -153,7 +153,7 @@
+     acao = parametros_rota[0]
+ 
+     if acao == "pontos":
+-        if len(parametros_rota) < 3:
++        if not len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] eb7d5eb7ccfd4e6e95241563a1be8f45
+placarServer.py core/AddNot 12
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -157,7 +157,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "faltas":
++    if not acao == "faltas":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+============
+[job-id] 24c0746b9f994d77afdda95b05d6a11c
+placarServer.py core/AddNot 13
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -158,7 +158,7 @@
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+     if acao == "faltas":
+-        if len(parametros_rota) < 3:
++        if not len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] 7ae4f276cbe84aeb841e31c8d120b136
+placarServer.py core/AddNot 14
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -162,7 +162,7 @@
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+-    if acao == "iniciar":
++    if not acao == "iniciar":
+         return iniciar_cronometro()
+ 
+     if acao == "pausar":
+============
+[job-id] ed011f7144ac403e9693517e4ab3429e
+placarServer.py core/AddNot 15
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -165,7 +165,7 @@
+     if acao == "iniciar":
+         return iniciar_cronometro()
+ 
+-    if acao == "pausar":
++    if not acao == "pausar":
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+============
+[job-id] 1982cf6c37184a67be30b9d1f2fdbfd7
+placarServer.py core/AddNot 16
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -168,7 +168,7 @@
+     if acao == "pausar":
+         return pausar_cronometro()
+ 
+-    if acao == "definir_tempo":
++    if not acao == "definir_tempo":
+         if len(parametros_rota) < 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+============
+[job-id] be6454195885460e886cabe19c728e00
+placarServer.py core/AddNot 17
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -169,7 +169,7 @@
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+-        if len(parametros_rota) < 2:
++        if not len(parametros_rota) < 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+============
+[job-id] 7c3942b8aae74788972bee24ceb3fcf7
+placarServer.py core/AddNot 18
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -173,7 +173,7 @@
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+-    if acao == "reiniciar":
++    if not acao == "reiniciar":
+         return reiniciar_partida()
+ 
+     raise ValueError(f"AþÒo desconhecida solicitada: '{acao}'")
+============
+[job-id] 517a71983db744b68df3c05379715344
+placarServer.py core/AddNot 19
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -198,7 +198,7 @@
+     def processar_requisicao(self, eh_metodo_post):
+         caminho_url = self.path.split("?")[0]
+ 
+-        if caminho_url.startswith(self.PREFIXO_ROTA_API):
++        if not caminho_url.startswith(self.PREFIXO_ROTA_API):
+             return self.tratar_requisicao_api(caminho_url, eh_metodo_post)
+ 
+         if eh_metodo_post:
+============
+[job-id] 357f44e0312942e1a559606ee9374185
+placarServer.py core/AddNot 20
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -201,7 +201,7 @@
+         if caminho_url.startswith(self.PREFIXO_ROTA_API):
+             return self.tratar_requisicao_api(caminho_url, eh_metodo_post)
+ 
+-        if eh_metodo_post:
++        if not eh_metodo_post:
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"", "text/plain")
+ 
+         return self.tratar_arquivo_estatico(caminho_url)
+============
+[job-id] 0ddcfea4f7ec4a6fbfbb9a3d8c679e15
+placarServer.py core/AddNot 21
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -209,7 +209,7 @@
+     def tratar_requisicao_api(self, caminho_url, eh_metodo_post):
+         try:
+             with TRAVA_SINCRONIZACAO:
+-                if eh_metodo_post:
++                if not eh_metodo_post:
+                     partes = extrair_segmentos_rota(caminho_url, self.PREFIXO_ROTA_API)
+                     processar_comando_partida(partes)
+                 corpo_json = gerar_json_estado_partida()
+============
+[job-id] 41e9bb5b9882480d8a79103bd8558598
+placarServer.py core/AddNot 22
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -225,7 +225,7 @@
+             )
+ 
+     def tratar_arquivo_estatico(self, caminho_url):
+-        nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
++        nome_arquivo = "index.html" if not caminho_url == "/" else caminho_url.lstrip("/")
+         caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
+ 
+         if not self.eh_caminho_estatico_valido(caminho_arquivo):
+============
+[job-id] 11017ad568ae4373a7c5f9aaf0d78ff3
+placarServer.py core/AddNot 23
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -228,7 +228,7 @@
+         nome_arquivo = "index.html" if caminho_url == "/" else caminho_url.lstrip("/")
+         caminho_arquivo = (DIRETORIO_ARQUIVOS_ESTATICOS / nome_arquivo).resolve()
+ 
+-        if not self.eh_caminho_estatico_valido(caminho_arquivo):
++        if not not self.eh_caminho_estatico_valido(caminho_arquivo):
+             return self.enviar_resposta_http(self.HTTP_STATUS_NOT_FOUND, b"nao encontrado", "text/plain")
+ 
+         try:
+============
+[job-id] 88728515e9f2425aa85904f7b7e78715
+placarServer.py core/AddNot 24
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -256,7 +256,7 @@
+         pass
+ 
+ 
+-if __name__ == "__main__":
++if not __name__ == "__main__":
+     HOST_SERVIDOR = "0.0.0.0"
+     PORTA_SERVIDOR = 8000
+ 
+============
+[job-id] 96d0e92894f946988e1710f4ebc93fc2
+placarServer.py core/ReplaceTrueWithFalse 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -91,7 +91,7 @@
+         return
+ 
+     estado_partida["inicio_cronometro_ms"] = obter_tempo_atual_ms()
+-    estado_partida["em_andamento"] = True
++    estado_partida["em_andamento"] = False
+ 
+ 
+ def pausar_cronometro():
+============
+[job-id] f7560e66a1074bd39d8bec1b0595745f
+placarServer.py core/ReplaceTrueWithFalse 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -250,7 +250,7 @@
+         self.processar_requisicao(eh_metodo_post=False)
+ 
+     def do_POST(self):
+-        self.processar_requisicao(eh_metodo_post=True)
++        self.processar_requisicao(eh_metodo_post=False)
+ 
+     def log_message(self, *args):
+         pass
+============
+[job-id] 3042bb45033343f7bfb6b93d380201ff
+placarServer.py core/ReplaceFalseWithTrue 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -27,7 +27,7 @@
+     "pontos": [0, 0],
+     "faltas": [0, 0],
+     "tempo_restante_ms": TEMPO_PADRAO_PARTIDA_MS,
+-    "em_andamento": False,
++    "em_andamento": True,
+     "inicio_cronometro_ms": 0,
+ }
+ 
+============
+[job-id] 367048e128c140d4953982e25c095dcc
+placarServer.py core/ReplaceFalseWithTrue 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -51,7 +51,7 @@
+ 
+     if tempo_restante <= TEMPO_ESGOTADO_MS:
+         estado_partida["tempo_restante_ms"] = TEMPO_ESGOTADO_MS
+-        estado_partida["em_andamento"] = False
++        estado_partida["em_andamento"] = True
+         return TEMPO_ESGOTADO_MS
+ 
+     return tempo_restante
+============
+[job-id] bb0a289a17174ae68bc77ebc5ab04e07
+placarServer.py core/ReplaceFalseWithTrue 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -97,7 +97,7 @@
+ def pausar_cronometro():
+     """Pausa a contagem do tempo conservando a marcaþÒo atual."""
+     estado_partida["tempo_restante_ms"] = calcular_tempo_restante_cronometro()
+-    estado_partida["em_andamento"] = False
++    estado_partida["em_andamento"] = True
+ 
+ 
+ def definir_duracao_partida(tempo_em_segundos):
+============
+[job-id] 204d46fab9f2425583cea11f40b459f9
+placarServer.py core/ReplaceFalseWithTrue 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -117,7 +117,7 @@
+     estado_partida["pontos"] = [0, 0]
+     estado_partida["faltas"] = [0, 0]
+     estado_partida["tempo_restante_ms"] = TEMPO_PADRAO_PARTIDA_MS
+-    estado_partida["em_andamento"] = False
++    estado_partida["em_andamento"] = True
+     estado_partida["inicio_cronometro_ms"] = 0
+ 
+ 
+============
+[job-id] e1851d04df4b452a9f939d0b00858b82
+placarServer.py core/ReplaceFalseWithTrue 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -247,7 +247,7 @@
+         return diretorio_base in caminho_arquivo.parents and caminho_arquivo.is_file()
+ 
+     def do_GET(self):
+-        self.processar_requisicao(eh_metodo_post=False)
++        self.processar_requisicao(eh_metodo_post=True)
+ 
+     def do_POST(self):
+         self.processar_requisicao(eh_metodo_post=True)
+============
+[job-id] 62745bcbb5fa4798babc554d9f70120d
+placarServer.py core/ReplaceAndWithOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -244,7 +244,7 @@
+ 
+     def eh_caminho_estatico_valido(self, caminho_arquivo):
+         diretorio_base = DIRETORIO_ARQUIVOS_ESTATICOS.resolve()
+-        return diretorio_base in caminho_arquivo.parents and caminho_arquivo.is_file()
++        return diretorio_base in caminho_arquivo.parents or caminho_arquivo.is_file()
+ 
+     def do_GET(self):
+         self.processar_requisicao(eh_metodo_post=False)
+============
+[job-id] cf1d4809a2d84960ae5e5557fe333105
+placarServer.py core/ExceptionReplacer 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -218,7 +218,7 @@
+                 self.HTTP_STATUS_OK, corpo_json.encode("utf-8"), "application/json"
+             )
+ 
+-        except ValueError as erro_parametro:
++        except CosmicRayTestingException as erro_parametro:
+             print(f"[LOG ALERTA] RequisiþÒo API invßlida: {erro_parametro}")
+             return self.enviar_resposta_http(
+                 self.HTTP_STATUS_BAD_REQUEST, b"Requisicao invalida", "text/plain"
+============
+[job-id] 0adc7471adfe4df082b275c838a35a23
+placarServer.py core/ExceptionReplacer 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -236,7 +236,7 @@
+             tipo_mime = TIPOS_MIME_SUPORTADOS.get(caminho_arquivo.suffix, "text/plain")
+             return self.enviar_resposta_http(self.HTTP_STATUS_OK, conteudo_arquivo, tipo_mime)
+ 
+-        except OSError as erro_io:
++        except CosmicRayTestingException as erro_io:
+             print(f"[LOG ERRO] Falha ao ler arquivo estßtico no disco: {erro_io}")
+             return self.enviar_resposta_http(
+                 self.HTTP_STATUS_INTERNAL_ERROR, b"Erro interno do servidor", "text/plain"
+============
+[job-id] 3a8d41db19744fd1ac47c46e1756c480
+placarServer.py core/NumberReplacer 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -4,7 +4,7 @@
+ from pathlib import Path
+ 
+ # Constantes Globais de Tempo e Equipes
+-MILISSEGUNDOS_POR_SEGUNDO = 1000
++MILISSEGUNDOS_POR_SEGUNDO = 1001
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+============
+[job-id] 9af891867987466b9e50ba400f28185a
+placarServer.py core/NumberReplacer 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -4,7 +4,7 @@
+ from pathlib import Path
+ 
+ # Constantes Globais de Tempo e Equipes
+-MILISSEGUNDOS_POR_SEGUNDO = 1000
++MILISSEGUNDOS_POR_SEGUNDO = 999
+ MINUTOS_PADRAO_PARTIDA = 10
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+============
+[job-id] 9de8ffdedc8042f1894f42b3778cf36a
+placarServer.py core/NumberReplacer 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -5,7 +5,7 @@
+ 
+ # Constantes Globais de Tempo e Equipes
+ MILISSEGUNDOS_POR_SEGUNDO = 1000
+-MINUTOS_PADRAO_PARTIDA = 10
++MINUTOS_PADRAO_PARTIDA = 11
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+     MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+============
+[job-id] e0739febe224462a8074eadeb09da3a1
+placarServer.py core/NumberReplacer 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -5,7 +5,7 @@
+ 
+ # Constantes Globais de Tempo e Equipes
+ MILISSEGUNDOS_POR_SEGUNDO = 1000
+-MINUTOS_PADRAO_PARTIDA = 10
++MINUTOS_PADRAO_PARTIDA = 9
+ SEGUNDOS_POR_MINUTO = 60
+ TEMPO_PADRAO_PARTIDA_MS = (
+     MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+============
+[job-id] 177ab2b88d974725950165a6d96030bf
+placarServer.py core/NumberReplacer 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -6,7 +6,7 @@
+ # Constantes Globais de Tempo e Equipes
+ MILISSEGUNDOS_POR_SEGUNDO = 1000
+ MINUTOS_PADRAO_PARTIDA = 10
+-SEGUNDOS_POR_MINUTO = 60
++SEGUNDOS_POR_MINUTO = 61
+ TEMPO_PADRAO_PARTIDA_MS = (
+     MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+============
+[job-id] ec02e798f92c4b808f6f0a490d120c7e
+placarServer.py core/NumberReplacer 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -6,7 +6,7 @@
+ # Constantes Globais de Tempo e Equipes
+ MILISSEGUNDOS_POR_SEGUNDO = 1000
+ MINUTOS_PADRAO_PARTIDA = 10
+-SEGUNDOS_POR_MINUTO = 60
++SEGUNDOS_POR_MINUTO = 59
+ TEMPO_PADRAO_PARTIDA_MS = (
+     MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+============
+[job-id] 499c7149604a4ad7b2fa3e0ca9c4ed5b
+placarServer.py core/NumberReplacer 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -11,7 +11,7 @@
+     MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+-INDICE_TIME_A = 0
++INDICE_TIME_A = 1
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+============
+[job-id] 736874ef7a3e4619809fe9c648a145e1
+placarServer.py core/NumberReplacer 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -11,7 +11,7 @@
+     MINUTOS_PADRAO_PARTIDA * SEGUNDOS_POR_MINUTO * MILISSEGUNDOS_POR_SEGUNDO
+ )
+ 
+-INDICE_TIME_A = 0
++INDICE_TIME_A = -1
+ INDICE_TIME_B = 1
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+============
+[job-id] 4dd7fedd9aa04e3995b51732ad737111
+placarServer.py core/NumberReplacer 8
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -12,7 +12,7 @@
+ )
+ 
+ INDICE_TIME_A = 0
+-INDICE_TIME_B = 1
++INDICE_TIME_B = 2
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+ DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
+============
+[job-id] 55e8672a26cc4d3cb3139fc5bf122870
+placarServer.py core/NumberReplacer 9
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -12,7 +12,7 @@
+ )
+ 
+ INDICE_TIME_A = 0
+-INDICE_TIME_B = 1
++INDICE_TIME_B = 0
+ 
+ TRAVA_SINCRONIZACAO = threading.Lock()
+ DIRETORIO_ARQUIVOS_ESTATICOS = Path(__file__).parent / "static"
+============
+[job-id] d01f5084ef2447ffb98824799f086ee6
+placarServer.py core/NumberReplacer 10
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -24,7 +24,7 @@
+ 
+ # Estado Global da Partida
+ estado_partida = {
+-    "pontos": [0, 0],
++    "pontos": [ 1, 0],
+     "faltas": [0, 0],
+     "tempo_restante_ms": TEMPO_PADRAO_PARTIDA_MS,
+     "em_andamento": False,
+============
+[job-id] 96950d9a39004c56ae36a35dcee38663
+placarServer.py core/NumberReplacer 11
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -24,7 +24,7 @@
+ 
+ # Estado Global da Partida
+ estado_partida = {
+-    "pontos": [0, 0],
++    "pontos": [ -1, 0],
+     "faltas": [0, 0],
+     "tempo_restante_ms": TEMPO_PADRAO_PARTIDA_MS,
+     "em_andamento": False,
+============
+[job-id] 2b5102841f5f4d8a8a7c5967676afc71
+placarServer.py core/NumberReplacer 12
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -24,7 +24,7 @@
+ 
+ # Estado Global da Partida
+ estado_partida = {
+-    "pontos": [0, 0],
++    "pontos": [0, 1],
+     "faltas": [0, 0],
+     "tempo_restante_ms": TEMPO_PADRAO_PARTIDA_MS,
+     "em_andamento": False,
+============
+[job-id] f2af37f2b4a343e89c2a4124cd237e09
+placarServer.py core/NumberReplacer 13
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -24,7 +24,7 @@
+ 
+ # Estado Global da Partida
+ estado_partida = {
+-    "pontos": [0, 0],
++    "pontos": [0, -1],
+     "faltas": [0, 0],
+     "tempo_restante_ms": TEMPO_PADRAO_PARTIDA_MS,
+     "em_andamento": False,
+============
+[job-id] d0dfb586d13d4898bb052c4f880176e1
+placarServer.py core/NumberReplacer 14
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -25,7 +25,7 @@
+ # Estado Global da Partida
+ estado_partida = {
+     "pontos": [0, 0],
+-    "faltas": [0, 0],
++    "faltas": [ 1, 0],
+     "tempo_restante_ms": TEMPO_PADRAO_PARTIDA_MS,
+     "em_andamento": False,
+     "inicio_cronometro_ms": 0,
+============
+[job-id] 6f096b9f1bf64959a95f969cbe5cd9b1
+placarServer.py core/NumberReplacer 15
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -25,7 +25,7 @@
+ # Estado Global da Partida
+ estado_partida = {
+     "pontos": [0, 0],
+-    "faltas": [0, 0],
++    "faltas": [ -1, 0],
+     "tempo_restante_ms": TEMPO_PADRAO_PARTIDA_MS,
+     "em_andamento": False,
+     "inicio_cronometro_ms": 0,
+============
+[job-id] 0c76c023e3a64e07ab8e3e69e2315763
+placarServer.py core/NumberReplacer 16
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -25,7 +25,7 @@
+ # Estado Global da Partida
+ estado_partida = {
+     "pontos": [0, 0],
+-    "faltas": [0, 0],
++    "faltas": [0, 1],
+     "tempo_restante_ms": TEMPO_PADRAO_PARTIDA_MS,
+     "em_andamento": False,
+     "inicio_cronometro_ms": 0,
+============
+[job-id] 04cd82a239ea4adb929382ba1edbb8c5
+placarServer.py core/NumberReplacer 17
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -25,7 +25,7 @@
+ # Estado Global da Partida
+ estado_partida = {
+     "pontos": [0, 0],
+-    "faltas": [0, 0],
++    "faltas": [0, -1],
+     "tempo_restante_ms": TEMPO_PADRAO_PARTIDA_MS,
+     "em_andamento": False,
+     "inicio_cronometro_ms": 0,
+============
+[job-id] fa77d86998464110b2e7ed69f4fca185
+placarServer.py core/NumberReplacer 18
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -28,7 +28,7 @@
+     "faltas": [0, 0],
+     "tempo_restante_ms": TEMPO_PADRAO_PARTIDA_MS,
+     "em_andamento": False,
+-    "inicio_cronometro_ms": 0,
++    "inicio_cronometro_ms": 1,
+ }
+ 
+ 
+============
+[job-id] b5982133241a4695801e1151a8ebce0c
+placarServer.py core/NumberReplacer 19
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -28,7 +28,7 @@
+     "faltas": [0, 0],
+     "tempo_restante_ms": TEMPO_PADRAO_PARTIDA_MS,
+     "em_andamento": False,
+-    "inicio_cronometro_ms": 0,
++    "inicio_cronometro_ms": -1,
+ }
+ 
+ 
+============
+[job-id] 6205e9b1616346dfa7763bfd3a2dcbba
+placarServer.py core/NumberReplacer 20
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -41,7 +41,7 @@
+ 
+ def calcular_tempo_restante_cronometro():
+     """Calcula o tempo restante no cron¶metro da partida."""
+-    TEMPO_ESGOTADO_MS = 0
++    TEMPO_ESGOTADO_MS = 1
+ 
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+============
+[job-id] 49b615218e5d46708dea48cdf24737ee
+placarServer.py core/NumberReplacer 21
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -41,7 +41,7 @@
+ 
+ def calcular_tempo_restante_cronometro():
+     """Calcula o tempo restante no cron¶metro da partida."""
+-    TEMPO_ESGOTADO_MS = 0
++    TEMPO_ESGOTADO_MS = -1
+ 
+     if not estado_partida["em_andamento"]:
+         return estado_partida["tempo_restante_ms"]
+============
+[job-id] 8cc681e52ced41cb90a244495d7afe75
+placarServer.py core/NumberReplacer 22
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -59,7 +59,7 @@
+ 
+ def registrar_pontuacao(indice_equipe, variacao_pontos):
+     """Registra a variaþÒo de pontos mantendo o comportamento dentro do fluxo normal."""
+-    VALOR_MINIMO_PONTOS = 0
++    VALOR_MINIMO_PONTOS = 1
+ 
+     if indice_equipe not in (INDICE_TIME_A, INDICE_TIME_B):
+         return
+============
+[job-id] d3b4e65a9b5449e98352f90bb92b4a74
+placarServer.py core/NumberReplacer 23
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -59,7 +59,7 @@
+ 
+ def registrar_pontuacao(indice_equipe, variacao_pontos):
+     """Registra a variaþÒo de pontos mantendo o comportamento dentro do fluxo normal."""
+-    VALOR_MINIMO_PONTOS = 0
++    VALOR_MINIMO_PONTOS = -1
+ 
+     if indice_equipe not in (INDICE_TIME_A, INDICE_TIME_B):
+         return
+============
+[job-id] 9e7a1c1c4d8344279bb233c082fc5010
+placarServer.py core/NumberReplacer 24
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -72,7 +72,7 @@
+ 
+ def registrar_falta(indice_equipe, variacao_faltas):
+     """Registra a variaþÒo de faltas mantendo o comportamento dentro do fluxo normal."""
+-    VALOR_MINIMO_FALTAS = 0
++    VALOR_MINIMO_FALTAS = 1
+ 
+     if indice_equipe not in (INDICE_TIME_A, INDICE_TIME_B):
+         return
+============
+[job-id] aaefa5475e85467aa13d8820475a18f8
+placarServer.py core/NumberReplacer 25
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -72,7 +72,7 @@
+ 
+ def registrar_falta(indice_equipe, variacao_faltas):
+     """Registra a variaþÒo de faltas mantendo o comportamento dentro do fluxo normal."""
+-    VALOR_MINIMO_FALTAS = 0
++    VALOR_MINIMO_FALTAS = -1
+ 
+     if indice_equipe not in (INDICE_TIME_A, INDICE_TIME_B):
+         return
+============
+[job-id] c104f23c227d4202be0afe23883e474d
+placarServer.py core/NumberReplacer 26
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -87,7 +87,7 @@
+     """Inicia o cron¶metro da partida."""
+     if estado_partida["em_andamento"]:
+         return
+-    if calcular_tempo_restante_cronometro() <= 0:
++    if calcular_tempo_restante_cronometro() <= 1:
+         return
+ 
+     estado_partida["inicio_cronometro_ms"] = obter_tempo_atual_ms()
+============
+[job-id] 9daa571b362340109ba606d125300bde
+placarServer.py core/NumberReplacer 27
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -87,7 +87,7 @@
+     """Inicia o cron¶metro da partida."""
+     if estado_partida["em_andamento"]:
+         return
+-    if calcular_tempo_restante_cronometro() <= 0:
++    if calcular_tempo_restante_cronometro() <= -1:
+         return
+ 
+     estado_partida["inicio_cronometro_ms"] = obter_tempo_atual_ms()
+============
+[job-id] 3e02af61f9174b26bb31bb37b5a82b18
+placarServer.py core/NumberReplacer 28
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -102,7 +102,7 @@
+ 
+ def definir_duracao_partida(tempo_em_segundos):
+     """Define a duraþÒo da partida."""
+-    TEMPO_MINIMO_SEGUNDOS = 0
++    TEMPO_MINIMO_SEGUNDOS = 1
+ 
+     if estado_partida["em_andamento"]:
+         return
+============
+[job-id] bb39215bf846452ebc42242ec2b12ada
+placarServer.py core/NumberReplacer 29
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -102,7 +102,7 @@
+ 
+ def definir_duracao_partida(tempo_em_segundos):
+     """Define a duraþÒo da partida."""
+-    TEMPO_MINIMO_SEGUNDOS = 0
++    TEMPO_MINIMO_SEGUNDOS = -1
+ 
+     if estado_partida["em_andamento"]:
+         return
+============
+[job-id] 1492e6e1b0c5429d9e4384dbce9dfa0e
+placarServer.py core/NumberReplacer 30
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -114,7 +114,7 @@
+ 
+ def reiniciar_partida():
+     """Restaura o estado inicial da partida."""
+-    estado_partida["pontos"] = [0, 0]
++    estado_partida["pontos"] = [ 1, 0]
+     estado_partida["faltas"] = [0, 0]
+     estado_partida["tempo_restante_ms"] = TEMPO_PADRAO_PARTIDA_MS
+     estado_partida["em_andamento"] = False
+============
+[job-id] 97fe7dcb76194a799c9f77faa7d69f8b
+placarServer.py core/NumberReplacer 31
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -114,7 +114,7 @@
+ 
+ def reiniciar_partida():
+     """Restaura o estado inicial da partida."""
+-    estado_partida["pontos"] = [0, 0]
++    estado_partida["pontos"] = [ -1, 0]
+     estado_partida["faltas"] = [0, 0]
+     estado_partida["tempo_restante_ms"] = TEMPO_PADRAO_PARTIDA_MS
+     estado_partida["em_andamento"] = False
+============
+[job-id] 506dc5ebff1b41de85e6298c71dc601b
+placarServer.py core/NumberReplacer 32
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -114,7 +114,7 @@
+ 
+ def reiniciar_partida():
+     """Restaura o estado inicial da partida."""
+-    estado_partida["pontos"] = [0, 0]
++    estado_partida["pontos"] = [0, 1]
+     estado_partida["faltas"] = [0, 0]
+     estado_partida["tempo_restante_ms"] = TEMPO_PADRAO_PARTIDA_MS
+     estado_partida["em_andamento"] = False
+============
+[job-id] fd36c725067f466c9e89851ce7bda866
+placarServer.py core/NumberReplacer 33
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -114,7 +114,7 @@
+ 
+ def reiniciar_partida():
+     """Restaura o estado inicial da partida."""
+-    estado_partida["pontos"] = [0, 0]
++    estado_partida["pontos"] = [0, -1]
+     estado_partida["faltas"] = [0, 0]
+     estado_partida["tempo_restante_ms"] = TEMPO_PADRAO_PARTIDA_MS
+     estado_partida["em_andamento"] = False
+============
+[job-id] 5dfb352dca47437d8a3f86f179dc3d26
+placarServer.py core/NumberReplacer 34
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -115,7 +115,7 @@
+ def reiniciar_partida():
+     """Restaura o estado inicial da partida."""
+     estado_partida["pontos"] = [0, 0]
+-    estado_partida["faltas"] = [0, 0]
++    estado_partida["faltas"] = [ 1, 0]
+     estado_partida["tempo_restante_ms"] = TEMPO_PADRAO_PARTIDA_MS
+     estado_partida["em_andamento"] = False
+     estado_partida["inicio_cronometro_ms"] = 0
+============
+[job-id] e8e2a15118934422bf801c129dc306a8
+placarServer.py core/NumberReplacer 35
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -115,7 +115,7 @@
+ def reiniciar_partida():
+     """Restaura o estado inicial da partida."""
+     estado_partida["pontos"] = [0, 0]
+-    estado_partida["faltas"] = [0, 0]
++    estado_partida["faltas"] = [ -1, 0]
+     estado_partida["tempo_restante_ms"] = TEMPO_PADRAO_PARTIDA_MS
+     estado_partida["em_andamento"] = False
+     estado_partida["inicio_cronometro_ms"] = 0
+============
+[job-id] ceb6a55791cd4fe8bfe831867a057069
+placarServer.py core/NumberReplacer 36
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -115,7 +115,7 @@
+ def reiniciar_partida():
+     """Restaura o estado inicial da partida."""
+     estado_partida["pontos"] = [0, 0]
+-    estado_partida["faltas"] = [0, 0]
++    estado_partida["faltas"] = [0, 1]
+     estado_partida["tempo_restante_ms"] = TEMPO_PADRAO_PARTIDA_MS
+     estado_partida["em_andamento"] = False
+     estado_partida["inicio_cronometro_ms"] = 0
+============
+[job-id] 4f2b93109a564d69a2c291ecb37b7f56
+placarServer.py core/NumberReplacer 37
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -115,7 +115,7 @@
+ def reiniciar_partida():
+     """Restaura o estado inicial da partida."""
+     estado_partida["pontos"] = [0, 0]
+-    estado_partida["faltas"] = [0, 0]
++    estado_partida["faltas"] = [0, -1]
+     estado_partida["tempo_restante_ms"] = TEMPO_PADRAO_PARTIDA_MS
+     estado_partida["em_andamento"] = False
+     estado_partida["inicio_cronometro_ms"] = 0
+============
+[job-id] 5e3375505d32454bbeadc4569670cc4b
+placarServer.py core/NumberReplacer 38
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -118,7 +118,7 @@
+     estado_partida["faltas"] = [0, 0]
+     estado_partida["tempo_restante_ms"] = TEMPO_PADRAO_PARTIDA_MS
+     estado_partida["em_andamento"] = False
+-    estado_partida["inicio_cronometro_ms"] = 0
++    estado_partida["inicio_cronometro_ms"] = 1
+ 
+ 
+ def gerar_json_estado_partida():
+============
+[job-id] fafa6949e0644bd6bcd8b0342a06e60c
+placarServer.py core/NumberReplacer 39
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -118,7 +118,7 @@
+     estado_partida["faltas"] = [0, 0]
+     estado_partida["tempo_restante_ms"] = TEMPO_PADRAO_PARTIDA_MS
+     estado_partida["em_andamento"] = False
+-    estado_partida["inicio_cronometro_ms"] = 0
++    estado_partida["inicio_cronometro_ms"] = -1
+ 
+ 
+ def gerar_json_estado_partida():
+============
+[job-id] a6c508d36d4c4f3f8ce2a8044ccabf6e
+placarServer.py core/NumberReplacer 40
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -150,7 +150,7 @@
+     if not parametros_rota:
+         return
+ 
+-    acao = parametros_rota[0]
++    acao = parametros_rota[ 1]
+ 
+     if acao == "pontos":
+         if len(parametros_rota) < 3:
+============
+[job-id] f15cabc4407b47c287d2f31587aadb71
+placarServer.py core/NumberReplacer 41
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -150,7 +150,7 @@
+     if not parametros_rota:
+         return
+ 
+-    acao = parametros_rota[0]
++    acao = parametros_rota[ -1]
+ 
+     if acao == "pontos":
+         if len(parametros_rota) < 3:
+============
+[job-id] 6f017f51af28407083e6b22588e85f4d
+placarServer.py core/NumberReplacer 42
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -153,7 +153,7 @@
+     acao = parametros_rota[0]
+ 
+     if acao == "pontos":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) < 4:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] e0d878c967ec47a79743ffb71417f2f3
+placarServer.py core/NumberReplacer 43
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -153,7 +153,7 @@
+     acao = parametros_rota[0]
+ 
+     if acao == "pontos":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) < 2:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] d1f1123150a746bb9b370e1daaefb0b2
+placarServer.py core/NumberReplacer 44
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -155,7 +155,7 @@
+     if acao == "pontos":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+-        return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
++        return registrar_pontuacao(int(parametros_rota[ 2]), int(parametros_rota[2]))
+ 
+     if acao == "faltas":
+         if len(parametros_rota) < 3:
+============
+[job-id] 8d20b76601d64f46805f9372a99615dc
+placarServer.py core/NumberReplacer 45
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -155,7 +155,7 @@
+     if acao == "pontos":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+-        return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
++        return registrar_pontuacao(int(parametros_rota[ 0]), int(parametros_rota[2]))
+ 
+     if acao == "faltas":
+         if len(parametros_rota) < 3:
+============
+[job-id] fd41d07a786240128876d05fba71039d
+placarServer.py core/NumberReplacer 46
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -155,7 +155,7 @@
+     if acao == "pontos":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+-        return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
++        return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[ 3]))
+ 
+     if acao == "faltas":
+         if len(parametros_rota) < 3:
+============
+[job-id] 8ec25441342e446e977924b8cc7f768c
+placarServer.py core/NumberReplacer 47
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -155,7 +155,7 @@
+     if acao == "pontos":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar pontuaþÒo.")
+-        return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
++        return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[ 1]))
+ 
+     if acao == "faltas":
+         if len(parametros_rota) < 3:
+============
+[job-id] 0c9ff1bc471b4aec9373f8c590d0bc95
+placarServer.py core/NumberReplacer 48
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -158,7 +158,7 @@
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+     if acao == "faltas":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) < 4:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] 6bf1c799150e4edcb26dd0e3e47861cf
+placarServer.py core/NumberReplacer 49
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -158,7 +158,7 @@
+         return registrar_pontuacao(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+     if acao == "faltas":
+-        if len(parametros_rota) < 3:
++        if len(parametros_rota) < 2:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+         return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
+ 
+============
+[job-id] 9383f487280045afaef31286bb21b4e2
+placarServer.py core/NumberReplacer 50
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -160,7 +160,7 @@
+     if acao == "faltas":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+-        return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
++        return registrar_falta(int(parametros_rota[ 2]), int(parametros_rota[2]))
+ 
+     if acao == "iniciar":
+         return iniciar_cronometro()
+============
+[job-id] 4db8381eb13c4429bc7693a0d7b3b041
+placarServer.py core/NumberReplacer 51
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -160,7 +160,7 @@
+     if acao == "faltas":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+-        return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
++        return registrar_falta(int(parametros_rota[ 0]), int(parametros_rota[2]))
+ 
+     if acao == "iniciar":
+         return iniciar_cronometro()
+============
+[job-id] 0f65d957d4764d56a98435666c90ebd7
+placarServer.py core/NumberReplacer 52
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -160,7 +160,7 @@
+     if acao == "faltas":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+-        return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
++        return registrar_falta(int(parametros_rota[1]), int(parametros_rota[ 3]))
+ 
+     if acao == "iniciar":
+         return iniciar_cronometro()
+============
+[job-id] 5dd6747233b547149efbf6ea822dc54d
+placarServer.py core/NumberReplacer 53
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -160,7 +160,7 @@
+     if acao == "faltas":
+         if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetros insuficientes para registrar falta.")
+-        return registrar_falta(int(parametros_rota[1]), int(parametros_rota[2]))
++        return registrar_falta(int(parametros_rota[1]), int(parametros_rota[ 1]))
+ 
+     if acao == "iniciar":
+         return iniciar_cronometro()
+============
+[job-id] abad668d1037442b8473d1e4e4588d4b
+placarServer.py core/NumberReplacer 54
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -169,7 +169,7 @@
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+-        if len(parametros_rota) < 2:
++        if len(parametros_rota) < 3:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+============
+[job-id] 2e44d35663204453a8d9154ce1f26693
+placarServer.py core/NumberReplacer 55
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -169,7 +169,7 @@
+         return pausar_cronometro()
+ 
+     if acao == "definir_tempo":
+-        if len(parametros_rota) < 2:
++        if len(parametros_rota) < 1:
+             raise ValueError("ParÔmetro de tempo ausente.")
+         return definir_duracao_partida(int(parametros_rota[1]))
+ 
+============
+[job-id] a2635286a99c4e60890fc327272edfc1
+placarServer.py core/NumberReplacer 56
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -171,7 +171,7 @@
+     if acao == "definir_tempo":
+         if len(parametros_rota) < 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+-        return definir_duracao_partida(int(parametros_rota[1]))
++        return definir_duracao_partida(int(parametros_rota[ 2]))
+ 
+     if acao == "reiniciar":
+         return reiniciar_partida()
+============
+[job-id] 8e07de7b8abd4336800b47d8639f2c35
+placarServer.py core/NumberReplacer 57
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -171,7 +171,7 @@
+     if acao == "definir_tempo":
+         if len(parametros_rota) < 2:
+             raise ValueError("ParÔmetro de tempo ausente.")
+-        return definir_duracao_partida(int(parametros_rota[1]))
++        return definir_duracao_partida(int(parametros_rota[ 0]))
+ 
+     if acao == "reiniciar":
+         return reiniciar_partida()
+============
+[job-id] 0f03a3de874e4810a8a582c77aafc741
+placarServer.py core/NumberReplacer 58
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -182,7 +182,7 @@
+ class manipuladorRequisicaoHTTP(BaseHTTPRequestHandler):
+     """Servidor web com separaþÒo explÝcita do fluxo feliz (try) e exceþ§es (except)."""
+ 
+-    HTTP_STATUS_OK = 200
++    HTTP_STATUS_OK = 201
+     HTTP_STATUS_BAD_REQUEST = 400
+     HTTP_STATUS_NOT_FOUND = 404
+     HTTP_STATUS_INTERNAL_ERROR = 500
+============
+[job-id] ee0481a3b26645398c02e059a68d06ab
+placarServer.py core/NumberReplacer 59
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -182,7 +182,7 @@
+ class manipuladorRequisicaoHTTP(BaseHTTPRequestHandler):
+     """Servidor web com separaþÒo explÝcita do fluxo feliz (try) e exceþ§es (except)."""
+ 
+-    HTTP_STATUS_OK = 200
++    HTTP_STATUS_OK = 199
+     HTTP_STATUS_BAD_REQUEST = 400
+     HTTP_STATUS_NOT_FOUND = 404
+     HTTP_STATUS_INTERNAL_ERROR = 500
+============
+[job-id] fe3f57f81321408b8866a28b7db75bde
+placarServer.py core/NumberReplacer 60
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -183,7 +183,7 @@
+     """Servidor web com separaþÒo explÝcita do fluxo feliz (try) e exceþ§es (except)."""
+ 
+     HTTP_STATUS_OK = 200
+-    HTTP_STATUS_BAD_REQUEST = 400
++    HTTP_STATUS_BAD_REQUEST = 401
+     HTTP_STATUS_NOT_FOUND = 404
+     HTTP_STATUS_INTERNAL_ERROR = 500
+     PREFIXO_ROTA_API = "/api/partida"
+============
+[job-id] a264162a15a4455a8885e275b3131997
+placarServer.py core/NumberReplacer 61
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -183,7 +183,7 @@
+     """Servidor web com separaþÒo explÝcita do fluxo feliz (try) e exceþ§es (except)."""
+ 
+     HTTP_STATUS_OK = 200
+-    HTTP_STATUS_BAD_REQUEST = 400
++    HTTP_STATUS_BAD_REQUEST = 399
+     HTTP_STATUS_NOT_FOUND = 404
+     HTTP_STATUS_INTERNAL_ERROR = 500
+     PREFIXO_ROTA_API = "/api/partida"
+============
+[job-id] 37da7691e6874f7c9dfb3e47ce8fd76a
+placarServer.py core/NumberReplacer 62
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -184,7 +184,7 @@
+ 
+     HTTP_STATUS_OK = 200
+     HTTP_STATUS_BAD_REQUEST = 400
+-    HTTP_STATUS_NOT_FOUND = 404
++    HTTP_STATUS_NOT_FOUND = 405
+     HTTP_STATUS_INTERNAL_ERROR = 500
+     PREFIXO_ROTA_API = "/api/partida"
+ 
+============
+[job-id] e356edb28d964728ba4b66c119685595
+placarServer.py core/NumberReplacer 63
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -184,7 +184,7 @@
+ 
+     HTTP_STATUS_OK = 200
+     HTTP_STATUS_BAD_REQUEST = 400
+-    HTTP_STATUS_NOT_FOUND = 404
++    HTTP_STATUS_NOT_FOUND = 403
+     HTTP_STATUS_INTERNAL_ERROR = 500
+     PREFIXO_ROTA_API = "/api/partida"
+ 
+============
+[job-id] 528b1b39685f41fdb69bab3e5aef372f
+placarServer.py core/NumberReplacer 64
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -185,7 +185,7 @@
+     HTTP_STATUS_OK = 200
+     HTTP_STATUS_BAD_REQUEST = 400
+     HTTP_STATUS_NOT_FOUND = 404
+-    HTTP_STATUS_INTERNAL_ERROR = 500
++    HTTP_STATUS_INTERNAL_ERROR = 501
+     PREFIXO_ROTA_API = "/api/partida"
+ 
+     def enviar_resposta_http(self, codigo_status, corpo_resposta, tipo_conteudo):
+============
+[job-id] c214a9813f4a47baaeba4755b63bb699
+placarServer.py core/NumberReplacer 65
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.INCOMPETENT
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -185,7 +185,7 @@
+     HTTP_STATUS_OK = 200
+     HTTP_STATUS_BAD_REQUEST = 400
+     HTTP_STATUS_NOT_FOUND = 404
+-    HTTP_STATUS_INTERNAL_ERROR = 500
++    HTTP_STATUS_INTERNAL_ERROR = 499
+     PREFIXO_ROTA_API = "/api/partida"
+ 
+     def enviar_resposta_http(self, codigo_status, corpo_resposta, tipo_conteudo):
+============
+[job-id] 970ae2c92e524345a5d1d23d6cb83c30
+placarServer.py core/NumberReplacer 66
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -196,7 +196,7 @@
+         self.wfile.write(corpo_resposta)
+ 
+     def processar_requisicao(self, eh_metodo_post):
+-        caminho_url = self.path.split("?")[0]
++        caminho_url = self.path.split("?")[ 1]
+ 
+         if caminho_url.startswith(self.PREFIXO_ROTA_API):
+             return self.tratar_requisicao_api(caminho_url, eh_metodo_post)
+============
+[job-id] f6790e75bc664e2ea8db3b3109c57234
+placarServer.py core/NumberReplacer 67
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -196,7 +196,7 @@
+         self.wfile.write(corpo_resposta)
+ 
+     def processar_requisicao(self, eh_metodo_post):
+-        caminho_url = self.path.split("?")[0]
++        caminho_url = self.path.split("?")[ -1]
+ 
+         if caminho_url.startswith(self.PREFIXO_ROTA_API):
+             return self.tratar_requisicao_api(caminho_url, eh_metodo_post)
+============
+[job-id] 08ebcd4ac7e3419fbf5923a27519e15c
+placarServer.py core/NumberReplacer 68
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -258,7 +258,7 @@
+ 
+ if __name__ == "__main__":
+     HOST_SERVIDOR = "0.0.0.0"
+-    PORTA_SERVIDOR = 8000
++    PORTA_SERVIDOR = 8001
+ 
+     print(f"Rodando em http://localhost:{PORTA_SERVIDOR}")
+     ThreadingHTTPServer((HOST_SERVIDOR, PORTA_SERVIDOR), manipuladorRequisicaoHTTP).serve_forever()
+============
+[job-id] bf2ad0e4220e4e29b2ee51db6db06f12
+placarServer.py core/NumberReplacer 69
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/placarServer.py
++++ b/placarServer.py
+@@ -258,7 +258,7 @@
+ 
+ if __name__ == "__main__":
+     HOST_SERVIDOR = "0.0.0.0"
+-    PORTA_SERVIDOR = 8000
++    PORTA_SERVIDOR = 7999
+ 
+     print(f"Rodando em http://localhost:{PORTA_SERVIDOR}")
+     ThreadingHTTPServer((HOST_SERVIDOR, PORTA_SERVIDOR), manipuladorRequisicaoHTTP).serve_forever()
+============
+total jobs: 308
+complete: 308 (100.00%)
+surviving mutants: 53 (17.21%)
